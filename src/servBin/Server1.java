@@ -79,9 +79,9 @@ dataBaseConnect();
             e.printStackTrace();
         }
         String query = "select nickname,password from users;";
-        String url = "jdbc:mysql://den1.mysql6.gear.host:3306/****";
-        String user = "****";
-         String password = "****";
+        String url = "jdbc:mysql://den1.mysql6.gear.host:3306/mydb241";
+        String user = "mydb241";
+         String password = "Sambek241_";
 
         try {
             con = DriverManager.getConnection(url, user, password);
