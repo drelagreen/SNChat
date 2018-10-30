@@ -77,7 +77,7 @@
     <session id="675978454">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.4" value="1" />
@@ -85,20 +85,24 @@
           <entry key="project.open.time.44" value="1" />
           <entry key="project.open.time.46" value="1" />
           <entry key="project.open.time.65" value="1" />
+          <entry key="project.open.time.66" value="1" />
           <entry key="project.open.time.77" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.open.time.92" value="1" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="LICENSE" value="1" />
           <entry key="MF" value="2" />
           <entry key="css" value="1" />
           <entry key="form" value="4" />
           <entry key="gitignore" value="2" />
           <entry key="groovy" value="3" />
-          <entry key="html" value="2" />
+          <entry key="html" value="3" />
           <entry key="http" value="1" />
           <entry key="ico" value="2" />
+          <entry key="iml" value="1" />
           <entry key="java" value="30" />
           <entry key="md" value="2" />
           <entry key="png" value="3" />
@@ -115,13 +119,14 @@
           <entry key="CSS" value="1" />
           <entry key="Database Element" value="4" />
           <entry key="GUI_DESIGNER_FORM" value="4" />
-          <entry key="HTML" value="2" />
+          <entry key="HTML" value="3" />
           <entry key="HTTP Request" value="1" />
+          <entry key="IDEA_MODULE" value="1" />
           <entry key="Image" value="5" />
           <entry key="JAVA" value="30" />
           <entry key="Manifest" value="2" />
           <entry key="Markdown" value="2" />
-          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="PLAIN_TEXT" value="3" />
           <entry key="SQL" value="1" />
           <entry key="SWF" value="1" />
           <entry key="Scratch" value="9" />
@@ -132,8 +137,10 @@
           <entry key="MF" value="6" />
           <entry key="cell" value="12" />
           <entry key="css" value="55" />
-          <entry key="html" value="161" />
-          <entry key="java" value="4230" />
+          <entry key="gitignore" value="1" />
+          <entry key="html" value="384" />
+          <entry key="iml" value="16" />
+          <entry key="java" value="4231" />
           <entry key="md" value="529" />
           <entry key="sql" value="63" />
           <entry key="txt" value="37" />
@@ -142,11 +149,12 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="55" />
-          <entry key="HTML" value="161" />
-          <entry key="JAVA" value="4230" />
+          <entry key="HTML" value="384" />
+          <entry key="IDEA_MODULE" value="16" />
+          <entry key="JAVA" value="4231" />
           <entry key="Manifest" value="6" />
           <entry key="Markdown" value="529" />
-          <entry key="PLAIN_TEXT" value="37" />
+          <entry key="PLAIN_TEXT" value="38" />
           <entry key="SQL" value="55" />
           <entry key="Scratch" value="20" />
         </counts>
@@ -155,37 +163,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/servBin/Server1.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SambekChat.iml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="83" column="38" selection-start-line="83" selection-start-column="38" selection-end-line="83" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="102">
+              <caret line="6" column="73" selection-start-line="6" selection-start-column="73" selection-end-line="6" selection-end-column="73" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/res/Шаблон для сообщений.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="232" column="24" selection-start-line="232" selection-start-column="24" selection-end-line="232" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LICENSE">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-10843" />
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="88" selection-start-line="21" selection-start-column="88" selection-end-line="21" selection-end-column="88" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bin/NewJFrame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#679#768#0" expanded="true" />
-                <element signature="e#11865#11952#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="221">
+              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -222,7 +229,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/servBin/Server2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
+            <state relative-caret-position="765">
               <caret line="53" column="68" selection-start-line="53" selection-start-column="68" selection-end-line="53" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -291,8 +298,10 @@
         <option value="$PROJECT_DIR$/src/servBin/T.java" />
         <option value="$PROJECT_DIR$/src/bin/LoginFrame.java" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/servBin/Server1.java" />
+        <option value="$PROJECT_DIR$/SambekChat.iml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/res/Шаблон для сообщений.html" />
       </list>
     </option>
   </component>
@@ -308,7 +317,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="793" />
     <option name="width" value="814" />
     <option name="height" value="867" />
@@ -319,6 +328,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -330,7 +340,29 @@
             <path>
               <item name="SambekChat" type="b2602c69:ProjectViewProjectNode" />
               <item name="SambekChat" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SambekChat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SambekChat" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SambekChat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SambekChat" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SambekChat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SambekChat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SambekChat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SambekChat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="servBin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SambekChat" type="b2602c69:ProjectViewProjectNode" />
@@ -342,7 +374,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -351,7 +382,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE" value="ToolWindow" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540769017415" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540913122266" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/Edit As Language" value="GenericSQL" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="database.data.extractors.current.id" value="SQL Inserts" />
@@ -365,13 +396,14 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\dmitr\OneDrive\IdeaProj\SambekChat\src" />
-      <recent name="C:\Users\dmitr\OneDrive\IdeaProj\SambekChat\src\bin" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\dmitr\OneDrive\IdeaProj\SambekChat\res" />
+      <recent name="C:\Users\dmitr\OneDrive\IdeaProj\SambekChat\res\lib" />
+      <recent name="C:\Users\dmitr\OneDrive\IdeaProj\SambekChat\res\images" />
       <recent name="C:\Users\dmitr\OneDrive\IdeaProj\SambekChat\res\recycle.bin" />
+      <recent name="C:\Users\dmitr\OneDrive\IdeaProj\SambekChat\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\dmitr\OneDrive\IdeaProj\SambekChat\src" />
       <recent name="C:\Users\dmitr\OneDrive\IdeaProj\SambekChat\src\bin" />
     </key>
@@ -488,7 +520,9 @@
       <workItem from="1540721293979" duration="48000" />
       <workItem from="1540734133493" duration="12194000" />
       <workItem from="1540750957307" duration="7500000" />
-      <workItem from="1540762451995" duration="5843000" />
+      <workItem from="1540762451995" duration="5943000" />
+      <workItem from="1540805614418" duration="18000" />
+      <workItem from="1540912158258" duration="936000" />
     </task>
     <task id="LOCAL-00001" summary="re">
       <created>1540763618055</created>
@@ -501,17 +535,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57772000" />
+    <option name="totallyTimeSpent" value="58826000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info x="575" y="204" width="450" height="451" id="UI Designer" order="1" weight="0.22557841" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.13881747" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.19601542" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.32884097" />
       <window_info anchor="bottom" id="Version Control" order="1" show_stripe_button="false" />
@@ -520,7 +555,7 @@
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.32884097" />
-      <window_info anchor="bottom" id="Run" order="7" visible="true" weight="0.32614556" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.32614556" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32884097" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
@@ -636,16 +671,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/volume-24-24-0.png">
+    <entry file="file://$PROJECT_DIR$/res/images/volume-24-24-0.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/prevnext-24-24-0.png">
+    <entry file="file://$PROJECT_DIR$/res/images/prevnext-24-24-0.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/playpause-24-24-0.png">
+    <entry file="file://$PROJECT_DIR$/res/images/playpause-24-24-0.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/favicon.ico">
+    <entry file="file://$PROJECT_DIR$/res/images/favicon.ico">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/res/recycle.bin/Graph2.java">
@@ -696,6 +731,23 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d873fc00-50af-49cb-b65b-4ad27df1b68a/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="das://87878d92-b0ab-4193-a80a-561db25dc631/schema/mydb241/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servBin/Server1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="83" column="9" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/bin/NewJFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -718,6 +770,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="119">
+            <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servBin/Server2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="53" column="68" selection-start-line="53" selection-start-column="68" selection-end-line="53" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/servBin/T.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1190">
@@ -732,50 +804,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://87878d92-b0ab-4193-a80a-561db25dc631/schema/mydb241/table/users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10843" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/87878d92-b0ab-4193-a80a-561db25dc631/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/servBin/Server2.java">
+    <entry file="file://$PROJECT_DIR$/SambekChat.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="53" column="68" selection-start-line="53" selection-start-column="68" selection-end-line="53" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="102">
+          <caret line="6" column="73" selection-start-line="6" selection-start-column="73" selection-end-line="6" selection-end-column="73" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="119">
-            <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/res/Шаблон для сообщений.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="88" selection-start-line="21" selection-start-column="88" selection-end-line="21" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/servBin/Server1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="83" column="38" selection-start-line="83" selection-start-column="38" selection-end-line="83" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="374">
+          <caret line="232" column="24" selection-start-line="232" selection-start-column="24" selection-end-line="232" selection-end-column="24" />
         </state>
       </provider>
     </entry>

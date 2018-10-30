@@ -76,7 +76,7 @@ public class LoginFrame extends NewJFrame {
 
 
         ArrayList<Image> iCont = new ArrayList<Image>();
-        iCont.add(new ImageIcon("favicon.ico").getImage());
+        iCont.add(new ImageIcon("images/favicon.ico").getImage());
         setIconImages(iCont);
 
         this.setLocationRelativeTo(null);
