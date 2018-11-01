@@ -5,6 +5,8 @@
  */
 package bin;
 
+import bin.Abstractions.NewJFrame;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -17,12 +19,9 @@ import java.util.ArrayList;
 import static bin.Kek.login;
 
 /**
- *
  * @author drelagreen
  */
 public class LoginFrame extends NewJFrame {
-
-
 
 
     KeyListener kl = new KeyListener() {
@@ -34,7 +33,7 @@ public class LoginFrame extends NewJFrame {
         @Override
         public void keyPressed(KeyEvent e) {
 
-            if (e.getKeyCode()==KeyEvent.VK_ENTER){
+            if (e.getKeyCode() == KeyEvent.VK_ENTER) {
                 logButton.doClick();
             }
         }
@@ -45,7 +44,7 @@ public class LoginFrame extends NewJFrame {
     };
 
 
-    LoginFrame(){
+    LoginFrame() {
         ipField.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
@@ -60,7 +59,7 @@ public class LoginFrame extends NewJFrame {
             @Override
             public void keyReleased(KeyEvent e) {
                 try {
-                    htmlPane.setPage("http://"+ipField.getText()+":7789");
+                    htmlPane.setPage("http://" + ipField.getText() + ":7789");
                 } catch (IOException e1) {
                     e1.printStackTrace();
                 }
@@ -69,7 +68,7 @@ public class LoginFrame extends NewJFrame {
         htmlPane.setContentType("text/html");
         htmlPane.setText("no connection!");
         try {
-            htmlPane.setPage("http://"+ipField.getText()+":7789");
+            htmlPane.setPage("http://" + ipField.getText() + ":7789");
         } catch (IOException e) {
             htmlPane.setText("No Connection");
         }
@@ -92,9 +91,12 @@ public class LoginFrame extends NewJFrame {
                 char[] pass = passField.getPassword();
 
                 if (!login.equals("") && !ip.equals(""))
-                    login(login,pass,ip);
+                    login(login, pass, ip);
 
-                if (Kek.isConnected) {connectionLabel.setText(" Входим..."); Kek.turn2(); } else {
+                if (Kek.isConnected) {
+                    connectionLabel.setText(" Входим...");
+                    Kek.turn2();
+                } else {
 
                     connectionLabel.setText(" Ошибка подключения! ");
                 }
@@ -102,9 +104,8 @@ public class LoginFrame extends NewJFrame {
         });
 
 
-
     }
 
-        }
+}
 
 

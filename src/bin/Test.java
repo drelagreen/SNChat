@@ -1,7 +1,8 @@
 package bin;
 
 public class Test {
-    public static void main(String[] args) {
-        Kek.turn2();
+    public static void main(String[] args){
+        Kek.cf = new ChatFrame();
+        Kek.cf.setVisible(true);;
     }
 }

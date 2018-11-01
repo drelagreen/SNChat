@@ -3,7 +3,6 @@ package bin;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.Socket;
 import java.util.Arrays;
 
@@ -14,6 +13,7 @@ public class Kek {
     static DataOutputStream dataOutputStream;
     static boolean isConnected = false;
     static LoginFrame lf;
+    static ChatFrame cf;
 
     public static void main(String[] args) {
         lf = new LoginFrame();
@@ -45,16 +45,11 @@ public class Kek {
     public static void turn2() {
         System.out.println("OK");
         lf.logButton.setEnabled(false);
+        lf.setVisible(false);
+        cf = new ChatFrame();
+        cf.setVisible(true);
     }
 }
-
-
-
-
-
-
-
-
 
 
     /* todo OLD VERSION

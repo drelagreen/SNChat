@@ -2,7 +2,7 @@
   <artifact type="jar" name="SambekChat:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/SambekChat_jar</output-path>
     <root id="archive" name="SambekChat.jar">
-      <element id="module-output" name="SambekChat" />
+      <element id="module-output" name="SNChat" />
     </root>
   </artifact>
 </component>
