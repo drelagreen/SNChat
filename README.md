@@ -7,3 +7,5 @@
         
     Так же jar файл валяется в моем drive.google-
     https://drive.google.com/file/d/1kB1fyjjXnRc778uI1bqXnrFCRGQFqqSk/view?usp=sharing
+updt 02.11:
+Работает основная часть чата, идет поддержка аватаров, запикивание матов... Сервер только в иходниках, клиент уже собран в artifact
