@@ -1,15 +1,9 @@
 package bin;
 
-import javax.swing.text.Document;
-import javax.swing.text.html.HTMLDocument;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.io.*;
-import java.net.MalformedURLException;
-import java.net.URL;
+
 
 public class ChatFrame extends bin.Abstractions.ChatFrame {
     //

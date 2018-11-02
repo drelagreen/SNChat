@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.sql.*;
 import java.util.*;
+import java.util.Date;
 
 public class Server1 {
     static volatile Map<String, Integer> clients = new HashMap<>();
@@ -107,7 +108,7 @@ public class Server1 {
 
     }
     private static String inHtml(String nick, String text){
-
+        Date date = new Date();
         text.replace(">","&gt;");
         text.replace("<","&lt;");
         text = mat(text);
@@ -122,7 +123,7 @@ public class Server1 {
                 "alt=\"da\" align=\"middle\" hspace=\"3\" vspace=\"3\"><span\n" +
                 "style=\"font-family: Arial; font-style: italic;\">&nbsp;<span\n" +
                 "style=\"text-decoration: underline;\">"+nick+"</span></span></span><small\n" +
-                "style=\"font-family: Arial;\"><span style=\"font-style: italic;\">[12:05]</span></small><span\n" +
+                "style=\"font-family: Arial;\"><span style=\"font-style: italic;\">["+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()+"]</span></small><span\n" +
                 "style=\"font-family: Arial;\"><span style=\"font-weight: bold;\"> :</span>\n" +
                 "</span><span style=\"font-weight: bold; font-family: Arial;\">"+text+"</span>\n" +
                 "</div><div></div>\n"+

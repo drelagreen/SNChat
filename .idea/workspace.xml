@@ -77,7 +77,7 @@
           <entry key="MF" value="2" />
           <entry key="css" value="1" />
           <entry key="form" value="8" />
-          <entry key="gitignore" value="2" />
+          <entry key="gitignore" value="3" />
           <entry key="groovy" value="3" />
           <entry key="html" value="9" />
           <entry key="http" value="1" />
@@ -107,7 +107,7 @@
           <entry key="JAVA" value="66" />
           <entry key="Manifest" value="2" />
           <entry key="Markdown" value="4" />
-          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="PLAIN_TEXT" value="5" />
           <entry key="SQL" value="1" />
           <entry key="SWF" value="1" />
           <entry key="Scratch" value="9" />
@@ -122,7 +122,7 @@
           <entry key="gitignore" value="1" />
           <entry key="html" value="621" />
           <entry key="iml" value="16" />
-          <entry key="java" value="8809" />
+          <entry key="java" value="8848" />
           <entry key="md" value="529" />
           <entry key="sql" value="72" />
           <entry key="txt" value="37" />
@@ -133,7 +133,7 @@
           <entry key="CSS" value="55" />
           <entry key="HTML" value="621" />
           <entry key="IDEA_MODULE" value="16" />
-          <entry key="JAVA" value="8809" />
+          <entry key="JAVA" value="8848" />
           <entry key="Manifest" value="6" />
           <entry key="Markdown" value="529" />
           <entry key="PLAIN_TEXT" value="44" />
@@ -148,8 +148,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bin/ChatFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-432">
-              <caret line="63" column="26" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
+            <state relative-caret-position="85">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -169,11 +169,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/servBin/Server1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1186">
-              <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+            <state relative-caret-position="268">
+              <caret line="125" column="102" selection-start-line="125" selection-start-column="102" selection-end-line="125" selection-end-column="102" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -296,9 +305,9 @@
         <option value="$PROJECT_DIR$/src/bin/Test.java" />
         <option value="$PROJECT_DIR$/html.html" />
         <option value="$PROJECT_DIR$/src/bin/Kek.java" />
-        <option value="$PROJECT_DIR$/src/servBin/Server1.java" />
         <option value="$PROJECT_DIR$/src/servBin/T.java" />
         <option value="$PROJECT_DIR$/src/bin/ChatFrame.java" />
+        <option value="$PROJECT_DIR$/src/servBin/Server1.java" />
       </list>
     </option>
   </component>
@@ -314,7 +323,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="793" />
     <option name="width" value="814" />
     <option name="height" value="867" />
@@ -379,7 +388,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE" value="ToolWindow" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541187360176" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541188290415" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/Edit As Language" value="GenericSQL" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="database.data.extractors.current.id" value="SQL Inserts" />
@@ -494,8 +503,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Server1" />
         <item itemvalue="Application.Kek" />
+        <item itemvalue="Application.Server1" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.ChatFrame" />
         <item itemvalue="Application.Testd" />
@@ -523,7 +532,7 @@
       <workItem from="1540805614418" duration="18000" />
       <workItem from="1540912158258" duration="8441000" />
       <workItem from="1541085853958" duration="39000" />
-      <workItem from="1541157390442" duration="23995000" />
+      <workItem from="1541157390442" duration="24896000" />
     </task>
     <task id="LOCAL-00001" summary="re">
       <created>1540763618055</created>
@@ -536,10 +545,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90365000" />
+    <option name="totallyTimeSpent" value="91266000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info x="575" y="204" width="450" height="451" id="UI Designer" order="1" weight="0.22557841" />
@@ -555,7 +565,7 @@
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.32884097" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.32614556" />
+      <window_info anchor="bottom" id="Run" order="7" visible="true" weight="0.32614556" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32884097" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.39892185" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
@@ -661,13 +671,6 @@
     <entry file="file://$PROJECT_DIR$/LICENSE">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-10843" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SNChat.iml">
@@ -895,13 +898,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://87878d92-b0ab-4193-a80a-561db25dc631/schema/mydb241/table/users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bin/Kek.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
@@ -914,10 +910,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://87878d92-b0ab-4193-a80a-561db25dc631/schema/mydb241/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/bin/ChatFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-432">
-          <caret line="63" column="26" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -926,8 +936,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/servBin/Server1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1186">
-          <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+        <state relative-caret-position="268">
+          <caret line="125" column="102" selection-start-line="125" selection-start-column="102" selection-end-line="125" selection-end-column="102" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
