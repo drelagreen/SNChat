@@ -933,17 +933,24 @@
       <DataType>varchar(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="232" parent="226" name="nickname">
+    <column id="232" parent="226" name="avatar">
+      <Position>6</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;res/images/sa.png&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="233" parent="226" name="nickname">
       <ColNames>nickname</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="233" parent="226" name="PRIMARY">
+    <key id="234" parent="226" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="234" parent="226" name="nickname">
+    <key id="235" parent="226" name="nickname">
       <ColNames>nickname</ColNames>
       <UnderlyingIndexName>nickname</UnderlyingIndexName>
     </key>

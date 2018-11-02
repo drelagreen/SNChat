@@ -57,7 +57,7 @@ public abstract class ChatFrame extends javax.swing.JFrame {
         chatField.setBackground(new java.awt.Color(237, 236, 236));
         chatField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102), 5));
         chatField.setContentType("text/html"); // NOI18N
-        chatField.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        chatField.setFont(new java.awt.Font("Tahoma", 1, 1)); // NOI18N
         chatField.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jScrollPane1.setViewportView(chatField);
 
@@ -264,8 +264,8 @@ public abstract class ChatFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton button;
-    private javax.swing.JEditorPane chatField;
+    public javax.swing.JButton button;
+    public javax.swing.JEditorPane chatField;
     private javax.swing.JPanel hzPanel;
     private javax.swing.JPanel hzPanel2;
     private javax.swing.JLabel jLabel;
@@ -276,6 +276,6 @@ public abstract class ChatFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextPane messageField;
+    public javax.swing.JTextPane messageField;
     // End of variables declaration//GEN-END:variables
 }

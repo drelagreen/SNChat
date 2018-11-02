@@ -813,58 +813,89 @@
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <table id="204" parent="2" name="users"/>
-    <column id="205" parent="204" name="id">
+    <table id="205" parent="2" name="users_1"/>
+    <column id="206" parent="204" name="id">
       <Position>1</Position>
       <DataType>int(5)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="206" parent="204" name="nickname">
+    <column id="207" parent="204" name="nickname">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="207" parent="204" name="password">
+    <column id="208" parent="204" name="password">
       <Position>3</Position>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="208" parent="204" name="prop">
+    <column id="209" parent="204" name="prop">
       <Position>4</Position>
       <DataType>int(5)|0s</DataType>
       <DefaultExpression>&apos;1&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="209" parent="204" name="email">
+    <column id="210" parent="204" name="email">
       <Position>5</Position>
       <DataType>varchar(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="210" parent="204" name="nickname">
+    <index id="211" parent="204" name="nickname">
       <ColNames>nickname</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="211" parent="204" name="nickname_2">
+    <index id="212" parent="204" name="nickname_2">
       <ColNames>nickname</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="212" parent="204" name="PRIMARY">
+    <key id="213" parent="204" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="213" parent="204" name="nickname">
+    <key id="214" parent="204" name="nickname">
       <ColNames>nickname</ColNames>
       <UnderlyingIndexName>nickname</UnderlyingIndexName>
     </key>
-    <key id="214" parent="204" name="nickname_2">
+    <key id="215" parent="204" name="nickname_2">
       <ColNames>nickname</ColNames>
       <UnderlyingIndexName>nickname_2</UnderlyingIndexName>
     </key>
+    <column id="216" parent="205" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="217" parent="205" name="nickname">
+      <Position>2</Position>
+      <DataType>tinytext|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="218" parent="205" name="password">
+      <Position>3</Position>
+      <DataType>tinytext|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="219" parent="205" name="prop">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="220" parent="205" name="email">
+      <Position>5</Position>
+      <DataType>tinytext|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="221" parent="205" name="ava">
+      <Position>6</Position>
+      <DataType>tinytext|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
   </database-model>
 </dataSource>

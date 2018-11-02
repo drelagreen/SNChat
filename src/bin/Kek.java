@@ -8,12 +8,12 @@ import java.util.Arrays;
 
 public class Kek {
     public static final String VERSION = "SambekChat";
-    static Socket socket;
-    static DataInputStream dataInputStream;
-    static DataOutputStream dataOutputStream;
+    static volatile Socket socket;
+    static volatile DataInputStream dataInputStream;
+    static volatile DataOutputStream dataOutputStream;
     static boolean isConnected = false;
-    static LoginFrame lf;
-    static ChatFrame cf;
+    static volatile LoginFrame lf;
+    static volatile ChatFrame cf;
 
     public static void main(String[] args) {
         lf = new LoginFrame();
@@ -48,11 +48,12 @@ public class Kek {
         lf.setVisible(false);
         cf = new ChatFrame();
         cf.setVisible(true);
+        fromServer();
     }
-}
 
 
-    /* todo OLD VERSION
+
+
 //    public static void sCom() {
 //        new Thread(() -> {
 //           while (true){
@@ -94,18 +95,33 @@ public class Kek {
 //           }
 //        }).start();
 //    }
+
+    public static void outToServer(String text){
+        try {
+            dataOutputStream.writeUTF(text);
+            System.out.println("Исходящее сообщение:" +text);
+            dataOutputStream.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
-//    public static void outToServer(String text){
-//        try {
-//            dataOutputStream.writeUTF(text);
-//            System.out.println(text);
-//            dataOutputStream.flush();
-//        } catch (IOException e) {
-//            g2.print2("SERVERERROR");
-////            g2.progressBar1.setVisible(false);
-//
-//        }
-//    }
+    public static void fromServer(){
+        new Thread(){
+            @Override
+            public void run() {
+                while (true){
+                    try {
+                        String s = dataInputStream.readUTF();
+                        System.out.println(s);
+                        cf.write(s);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }.start();
+
+
+    }
 
 }
-*/

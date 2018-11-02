@@ -45,6 +45,9 @@ public class LoginFrame extends NewJFrame {
 
 
     LoginFrame() {
+        this.setLocationRelativeTo(null);
+
+
         ipField.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
@@ -78,7 +81,7 @@ public class LoginFrame extends NewJFrame {
         iCont.add(new ImageIcon("images/favicon.ico").getImage());
         setIconImages(iCont);
 
-        this.setLocationRelativeTo(null);
+
         logField.addKeyListener(kl);
         passField.addKeyListener(kl);
         ipField.addKeyListener(kl);

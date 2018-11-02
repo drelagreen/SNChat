@@ -35,7 +35,6 @@ class T extends Thread {
                 }
                 dataOutputStream.writeBoolean(true);
                 nick = w1[0];//todo NICKNAME
-                dataOutputStream.writeUTF("N" + nick);
 
                 Server1.online.add(this);
                 inMessageDaemon();
@@ -65,7 +64,7 @@ class T extends Thread {
         try {
 
             dataOutputStream.writeUTF(m);
-
+            System.out.println("Отправлено!");
         } catch (IOException e) {
             if (hmm) {
                 System.out.println("ERROR " + this.nick);
