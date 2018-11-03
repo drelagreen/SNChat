@@ -1,6 +1,7 @@
 package bin;
 
 
+import javax.swing.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -10,12 +11,18 @@ public class ChatFrame extends bin.Abstractions.ChatFrame {
    String html = "";
 
     ChatFrame() {
+        messageField.setLineWrap(true);
+        messageField.setWrapStyleWord(true);
+        button.setText(null);
+
+
+        button.setIcon(new ImageIcon("https://vk.com/images/emoji/2764_2x.png"));
         chatField.setAutoscrolls(true);
         chatField.setText("<div></div>");
         setTitle("SNchat");
         tittle();
     chatField.setSize(1000,1000);
-    setSize(720,530);
+    setSize(730,530);
     this.setLocationRelativeTo(null);
 
         button.addActionListener(e -> {
@@ -34,7 +41,7 @@ public class ChatFrame extends bin.Abstractions.ChatFrame {
                 button.doClick();
 
             }
-            if (!e.isShiftDown()&&e.getKeyCode()==KeyEvent.VK_ENTER){
+            if (e.isShiftDown()&&e.getKeyCode()==KeyEvent.VK_ENTER){
                 messageField.setText(messageField.getText()+"\n");
             }
             }

@@ -116,6 +116,7 @@ public class Kek {
                         cf.write(s);
                     } catch (IOException e) {
                         e.printStackTrace();
+                        while(true);
                     }
                 }
             }

@@ -9,10 +9,6 @@ import java.util.Date;
 public class Server1 {
     static volatile Map<String, Integer> clients = new HashMap<>();
     static volatile ArrayList<T> online = new ArrayList<>();
-    static volatile ServerSocket serverSocket;
-    private static Connection con;
-    private static Statement stmt;
-    private static ResultSet rs;
     private static Map<String,String> avatar = new HashMap<>();
     public static void main(String[] args) throws IOException {
 
@@ -23,7 +19,7 @@ public class Server1 {
     }
 
     static void newConnect(String nick) {
-
+        sendMessageFromConsole("!newConnection "+nick);
     }
 
     static void offConnect(T t, String nick) {
@@ -33,16 +29,62 @@ public class Server1 {
                 online.remove(i);
                 t.socket = null;
                 t.interrupt();
-                sendMessage3("!theOnline");
-                /*todo СООБЩЕНИЕ ОБ ОТКЛЮЧЕНИИ ПОЛЬЗОВАТЕЛЯ*/
+                sendMessageFromConsole("!theOnline");
+                sendMessageFromConsole("!disconnect "+nick);
             }
 
         }
     }
 
-    static void sendMessage3(String m) {
-
+    static void sendMessageFromConsole(String m) {
+        String[] temp = m.split(" ");
+        switch (temp[0]){
+            case ("!theOnline"):
+                break;
+            case ("!newConnection"):
+                String msg =
+                        "<div style=\"background-color: rgb(153, 153, 153);\"><span\n" +
+                        "        style=\"font-weight: bold; color: red;\"> <img\n" +
+                        "        style=\"border: 2px solid ; width: 50px; height: 50px;\"\n" +
+                        "        src=\"https://vk.com/images/emoji/2764_2x.png\"\n" +
+                        "        alt=\"da\" align=\"middle\" hspace=\"3\" vspace=\"3\"><span\n" +
+                        "        style=\"font-family: Arial; font-style: italic;\">&nbsp;<span\n" +
+                        "        style=\"text-decoration: underline;\">*</span></span></span><small\n" +
+                        "        style=\"font-family: Arial;\"><span style=\"font-style: italic;\">["+new Date().getHours()+":"+new Date().getMinutes()+":"+new Date().getSeconds()+"]</span></small><span\n" +
+                        "        style=\"font-family: Arial;\"><span style=\"font-weight: bold;\">  --&gt;</span>\n" +
+                        "</span><span style=\"font-weight: bold; font-family: Arial;\">"+temp[1] +" Подключился к серверу! </span>\n" +
+                        "</div>\n" +
+                        "\n";
+                if (online.size() != 0)
+                    for (int i = 0; i < online.size(); i++) {
+                        if (!online.get(i).isInterrupted()) {
+                            online.get(i).sMessage(msg);
+                        }
+                        }
+                break;
+            case ("!disconnect"):
+                if (online.size() != 0)
+                    for (int i = 0; i < online.size(); i++) {
+                        if (!online.get(i).isInterrupted()) {
+                            online.get(i).sMessage("<div style=\"background-color: rgb(153, 153, 153);\"><span\n" +
+                                    "style=\"font-weight: bold; color: black;\"> <img\n" +
+                                    "style=\"border: 2px solid ; width: 50px; height: 50px;\"\n" +
+                                    "src=\"https://vk.com/images/emoji/D83DDC94_2x.png\"\n" +
+                                    "alt=\"da\" align=\"middle\" hspace=\"3\" vspace=\"3\"><span\n" +
+                                    "style=\"font-family: Arial; font-style: italic;\">&nbsp;<span\n" +
+                                    "style=\"text-decoration: underline;\">*</span></span></span><small\n" +
+                                    "style=\"font-family: Arial;\"><span style=\"font-style: italic;\">["+new Date().getHours()+":"+new Date().getMinutes()+":"+new Date().getSeconds()+"]</span></small><span\n" +
+                                    "style=\"font-family: Arial;\"><span style=\"font-weight: bold;\"> --&gt;</span>\n" +
+                                    "</span><span style=\"font-weight: bold; font-family: Arial;\">"+temp[1]+" Отключился!"+"</span>\n" +
+                                    "</div><div></div>\n");
+                        }
+                    }
+                break;
+            case ("!allert"):
+                break;
+        }
     }
+
 
     static void sendMessage(String nick, String m) {
         if (online.size() != 0)
@@ -54,7 +96,7 @@ public class Server1 {
     }
 
     static void kek() throws IOException {
-        serverSocket = new ServerSocket(7788);
+        ServerSocket serverSocket = new ServerSocket(7788);
         while (true) {
             try {
                 System.out.println("Ожидание подключений...");
@@ -84,9 +126,9 @@ public class Server1 {
         String password = "Sambek241_";
 
         try {
-            con = DriverManager.getConnection(url, user, password);
-            stmt = con.createStatement();
-            rs = stmt.executeQuery(query);
+            Connection con = DriverManager.getConnection(url, user, password);
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery(query);
             while (rs.next()) {
                 String nick = rs.getString("nickname");
                 System.out.println(nick);
@@ -109,13 +151,22 @@ public class Server1 {
     }
     private static String inHtml(String nick, String text){
         Date date = new Date();
-        text.replace(">","&gt;");
-        text.replace("<","&lt;");
-        text = mat(text);
+        text = replacer(text);
         String url = avatar.get(nick);
-        text.replace("#!","<span\n" +
+        text = text.replace("#!","<span\n" +
                 "style=\"text-decoration: underline;\">");
-        text.replace("!#","</span>");
+        text = text.replace("!#","</span>");
+        String[] kek= text.split("");
+        if (kek.length>41){
+            String temp="<p style=\"font-weight: bold; font-family: Arial;\">";
+            for (int i = 0; i < kek.length; i+=1) {
+                temp+=kek[i];
+                if (i%41==0&&i!=0) temp+="</p><p style=\"font-weight: bold; font-family: Arial;\">";
+            }
+            temp+="</p><p></p>";
+            text = temp;
+        }
+
         String xx = "<div style=\"background-color: rgb(153, 153, 153);\"><span\n" +
                 "style=\"font-weight: bold; color: black;\"> <img\n" +
                 "style=\"border: 2px solid ; width: 50px; height: 50px;\"\n" +
@@ -131,9 +182,11 @@ public class Server1 {
         System.out.println(xx);
         return xx;
     }
-    static String mat(String text) {
+    static String replacer(String text) {
 
         Map<String,String> kek = new HashMap<>();
+        kek.put("<","&lt;");
+        kek.put(">","&gt;");
         kek.put("хуй", flower());
         kek.put("пизда", flower());
         kek.put("сука", flower());

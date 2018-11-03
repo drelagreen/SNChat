@@ -33,7 +33,7 @@ public abstract class ChatFrame extends javax.swing.JFrame {
         chatField = new javax.swing.JEditorPane();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        messageField = new javax.swing.JTextPane();
+        messageField = new javax.swing.JTextArea();
         jPanel5 = new javax.swing.JPanel();
         button = new javax.swing.JButton();
         hzPanel2 = new javax.swing.JPanel();
@@ -276,6 +276,6 @@ public abstract class ChatFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
-    public javax.swing.JTextPane messageField;
+    public javax.swing.JTextArea messageField;
     // End of variables declaration//GEN-END:variables
 }
