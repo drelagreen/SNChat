@@ -1,4 +1,8 @@
-package bin.Abstractions;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
 /**
  *
@@ -261,8 +265,8 @@ public abstract class ChatFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton button;
     public javax.swing.JEditorPane chatField;
-    public javax.swing.JPanel hzPanel;
-    public javax.swing.JPanel hzPanel2;
+    private javax.swing.JPanel hzPanel;
+    private javax.swing.JPanel hzPanel2;
     private javax.swing.JLabel jLabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;

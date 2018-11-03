@@ -1,6 +1,5 @@
 package bin;
 
-import java.awt.*;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -19,6 +18,7 @@ public class Kek {
     public static void main(String[] args) {
         lf = new LoginFrame();
         lf.setVisible(true);
+
     }
 
     static void login(String log, char[] pas, String ip) {
