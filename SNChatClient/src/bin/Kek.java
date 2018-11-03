@@ -1,5 +1,6 @@
 package bin;
 
+import java.awt.*;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -114,6 +115,7 @@ public class Kek {
                         String s = dataInputStream.readUTF();
                         System.out.println(s);
                         cf.write(s);
+
                     } catch (IOException e) {
                         e.printStackTrace();
                         while(true);

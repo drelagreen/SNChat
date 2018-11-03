@@ -43,7 +43,7 @@ public class Server1 {
                 break;
             case ("!newConnection"):
                 String msg =
-                        "<div style=\"background-color: rgb(153, 153, 153);\"><span\n" +
+                        "nc <div style=\"background-color: rgb(153, 153, 153);\"><span\n" +
                         "        style=\"font-weight: bold; color: red;\"> <img\n" +
                         "        style=\"border: 2px solid ; width: 50px; height: 50px;\"\n" +
                         "        src=\"https://vk.com/images/emoji/2764_2x.png\"\n" +
@@ -53,7 +53,7 @@ public class Server1 {
                         "        style=\"font-family: Arial;\"><span style=\"font-style: italic;\">["+new Date().getHours()+":"+new Date().getMinutes()+":"+new Date().getSeconds()+"]</span></small><span\n" +
                         "        style=\"font-family: Arial;\"><span style=\"font-weight: bold;\">  --&gt;</span>\n" +
                         "</span><span style=\"font-weight: bold; font-family: Arial;\">"+temp[1] +" Подключился к серверу! </span>\n" +
-                        "</div>\n" +
+                        "</div><div></div>\n" +
                         "\n";
                 if (online.size() != 0)
                     for (int i = 0; i < online.size(); i++) {
@@ -66,7 +66,7 @@ public class Server1 {
                 if (online.size() != 0)
                     for (int i = 0; i < online.size(); i++) {
                         if (!online.get(i).isInterrupted()) {
-                            online.get(i).sMessage("<div style=\"background-color: rgb(153, 153, 153);\"><span\n" +
+                            online.get(i).sMessage("dis <div style=\"background-color: rgb(153, 153, 153);\"><span\n" +
                                     "style=\"font-weight: bold; color: black;\"> <img\n" +
                                     "style=\"border: 2px solid ; width: 50px; height: 50px;\"\n" +
                                     "src=\"https://vk.com/images/emoji/D83DDC94_2x.png\"\n" +

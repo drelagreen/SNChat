@@ -2,15 +2,37 @@ package bin;
 
 
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.awt.peer.TrayIconPeer;
 
 
 public class ChatFrame extends bin.Abstractions.ChatFrame {
     //
-   String html = "";
-
+    private String html = "";
+    private TrayIcon trayIcon;
+    private SystemTray tray;
     ChatFrame() {
+        trayIcon = new TrayIcon(Toolkit.getDefaultToolkit().getImage("res/images/xs.png"), "ВЫХОД ИЗ ЧАТА");
+        tray = SystemTray.getSystemTray();
+        trayIcon.setImageAutoSize(true);
+        try {
+            tray.add(trayIcon);
+        } catch (AWTException e) {
+            System.err.println("TrayIcon could not be added.");
+        }
+        trayIcon.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
+
+
+
         messageField.setLineWrap(true);
         messageField.setWrapStyleWord(true);
         button.setText(null);
@@ -61,15 +83,38 @@ public class ChatFrame extends bin.Abstractions.ChatFrame {
         Kek.outToServer(s);
         messageField.setText(null);
     }
-    public void write(String text){
+    public void write(String text) {
+
+        String temp[] = text.split(" ");
+        if (temp[0].equals("dis")){
+            trayIcon.displayMessage("SNChat","Один из участников чата отключился", TrayIcon.MessageType.NONE);
+            temp[0]="";
+            String temp2="";
+            for (String s : temp) {
+                temp2+=(s+" ");
+            }
+            text=temp2;
+        } else if (temp[0].equals("nc")){
+            if(!html.equalsIgnoreCase(""))
+            trayIcon.displayMessage("SNChat","Новое подключение!", TrayIcon.MessageType.NONE);
+            temp[0]="";
+            String temp2="";
+            for (String s : temp) {
+                temp2+=s+" ";
+            }
+            text=temp2;
+        }
+
         html = text + html;
         chatField.setText(html);
     }
+
+
     public void tittle(){
         new Thread(()->{
            while (true){
-               setTitle("SNchat");
-               try {
+               this.setTitle("SNchat");
+              try {
                    Thread.sleep(2000);
                } catch (InterruptedException e) {
                    e.printStackTrace();

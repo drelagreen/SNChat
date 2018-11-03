@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SNChat.iml" filepath="$PROJECT_DIR$/SNChat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SNChatClient.iml" filepath="$PROJECT_DIR$/SNChatClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SNChatServer/SNChatServer.iml" filepath="$PROJECT_DIR$/SNChatServer/SNChatServer.iml" />
     </modules>
   </component>
 </project>

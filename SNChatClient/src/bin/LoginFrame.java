@@ -22,7 +22,7 @@ import static bin.Kek.login;
  * @author drelagreen
  */
 public class LoginFrame extends NewJFrame {
-
+    TrayIcon trayIcon;SystemTray tray;
 
     KeyListener kl = new KeyListener() {
         @Override
@@ -45,6 +45,22 @@ public class LoginFrame extends NewJFrame {
 
 
     LoginFrame() {
+        trayIcon = new TrayIcon(Toolkit.getDefaultToolkit().getImage("res/images/xs.png"), "ВЫХОД ИЗ ЧАТА");
+        tray = SystemTray.getSystemTray();
+        trayIcon.setImageAutoSize(true);
+        try {
+            tray.add(trayIcon);
+        } catch (AWTException e) {
+            System.err.println("TrayIcon could not be added.");
+        }
+        trayIcon.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
+
+
         this.setLocationRelativeTo(null);
 
 
@@ -98,6 +114,7 @@ public class LoginFrame extends NewJFrame {
 
                 if (Kek.isConnected) {
                     connectionLabel.setText(" Входим...");
+                    tray.remove(trayIcon);
                     Kek.turn2();
                 } else {
 
