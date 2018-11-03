@@ -20,6 +20,7 @@ public class Server1 {
 
     static void newConnect(String nick) {
         sendMessageFromConsole("!newConnection "+nick);
+        sendMessageFromConsole("!theOnline");
     }
 
     static void offConnect(T t, String nick) {
@@ -40,6 +41,16 @@ public class Server1 {
         String[] temp = m.split(" ");
         switch (temp[0]){
             case ("!theOnline"):
+                String x = "sm ONLINE:\n";
+                for (T t : online) {
+                    x+=t.nick+"'\n";
+                }
+                if (online.size() != 0)
+                    for (int i = 0; i < online.size(); i++) {
+                        if (!online.get(i).isInterrupted()) {
+                            online.get(i).sMessage(x);
+                        }
+                    }
                 break;
             case ("!newConnection"):
                 String msg =

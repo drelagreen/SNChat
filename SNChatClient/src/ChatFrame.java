@@ -9,7 +9,7 @@ import java.awt.event.KeyListener;
 public class ChatFrame extends bin.Abstractions.ChatFrame {
     boolean x = true;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JEditorPane onlinePanel;
+   javax.swing.JEditorPane onlinePanel;
     private javax.swing.JLayeredPane smilesPannel;
     private javax.swing.JButton js1;
     private javax.swing.JButton js10;
@@ -37,7 +37,7 @@ public class ChatFrame extends bin.Abstractions.ChatFrame {
 //        online.setText("ddddddddddddddddddddddddddssssssssssssssssssssssssssssddddddddddddddddddddddddsssssssssssss");
 
 
-        trayIcon = new TrayIcon(Toolkit.getDefaultToolkit().getImage("res/images/xs.png"), "ВЫХОД ИЗ ЧАТА");
+        trayIcon = new TrayIcon(Toolkit.getDefaultToolkit().getImage("xs.png"), "ВЫХОД ИЗ ЧАТА");
         tray = SystemTray.getSystemTray();
         trayIcon.setImageAutoSize(true);
         try {
@@ -143,7 +143,7 @@ public class ChatFrame extends bin.Abstractions.ChatFrame {
                 initOnlinePanel();
                 hzPanel.updateUI();
                 smilesButton.updateUI();
-                onlinePanel.setText("kakakakakakakakakakakaakakaka\n"+"kakakakakakakakakakakaakakaka\n");
+                onlinePanel.setText(Kek.serverMessage());
             x=!x;
             } else{
                 smilesInit();
@@ -156,7 +156,7 @@ public class ChatFrame extends bin.Abstractions.ChatFrame {
         initOnlinePanel();
         hzPanel.updateUI();
         smilesButton.updateUI();
-        onlinePanel.setText("kakakakakakakakakakakaakakaka\n"+"kakakakakakakakakakakaakakaka\n");
+        onlinePanel.setText(Kek.serverMessage());
 
     }
 
@@ -178,18 +178,29 @@ public class ChatFrame extends bin.Abstractions.ChatFrame {
             }
             text=temp2;
         } else if (temp[0].equals("nc")){
+                temp[0]="";
+            String temp2="";
+            for (String s : temp) {
+                temp2+=s+" ";
+            }
+            text=temp2;
             if(!html.equalsIgnoreCase(""))
             trayIcon.displayMessage("SNChat","Новое подключение!", TrayIcon.MessageType.NONE);
+
+        } else if (temp[0].equals("sm")){
             temp[0]="";
             String temp2="";
             for (String s : temp) {
                 temp2+=s+" ";
             }
             text=temp2;
+            Kek.serverMessage1(text);
+            text="";
         }
-
-        html = text + html;
-        chatField.setText(html);
+        if(text!="") {
+            html = text + html;
+            chatField.setText(html);
+        }
     }
 
 

@@ -72,7 +72,7 @@
     <session id="675978454">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.23" value="1" />
@@ -94,16 +94,16 @@
           <entry key="MF" value="3" />
           <entry key="css" value="1" />
           <entry key="form" value="12" />
-          <entry key="gitignore" value="5" />
+          <entry key="gitignore" value="6" />
           <entry key="groovy" value="3" />
           <entry key="html" value="13" />
           <entry key="http" value="1" />
           <entry key="ico" value="4" />
           <entry key="iml" value="2" />
-          <entry key="java" value="108" />
+          <entry key="java" value="118" />
           <entry key="jpg" value="2" />
           <entry key="md" value="5" />
-          <entry key="png" value="56" />
+          <entry key="png" value="100" />
           <entry key="rtf" value="2" />
           <entry key="sql" value="7" />
           <entry key="swf" value="1" />
@@ -121,11 +121,11 @@
           <entry key="HTML" value="13" />
           <entry key="HTTP Request" value="1" />
           <entry key="IDEA_MODULE" value="2" />
-          <entry key="Image" value="62" />
-          <entry key="JAVA" value="108" />
+          <entry key="Image" value="106" />
+          <entry key="JAVA" value="118" />
           <entry key="Manifest" value="3" />
           <entry key="Markdown" value="5" />
-          <entry key="PLAIN_TEXT" value="9" />
+          <entry key="PLAIN_TEXT" value="10" />
           <entry key="SQL" value="1" />
           <entry key="SWF" value="1" />
           <entry key="Scratch" value="9" />
@@ -137,10 +137,10 @@
           <entry key="cell" value="27" />
           <entry key="css" value="55" />
           <entry key="dummy" value="7" />
-          <entry key="gitignore" value="8" />
+          <entry key="gitignore" value="16" />
           <entry key="html" value="652" />
           <entry key="iml" value="16" />
-          <entry key="java" value="12824" />
+          <entry key="java" value="13289" />
           <entry key="md" value="529" />
           <entry key="sql" value="72" />
           <entry key="txt" value="37" />
@@ -151,10 +151,10 @@
           <entry key="CSS" value="55" />
           <entry key="HTML" value="652" />
           <entry key="IDEA_MODULE" value="16" />
-          <entry key="JAVA" value="12824" />
+          <entry key="JAVA" value="13289" />
           <entry key="Manifest" value="6" />
           <entry key="Markdown" value="529" />
-          <entry key="PLAIN_TEXT" value="52" />
+          <entry key="PLAIN_TEXT" value="60" />
           <entry key="SQL" value="64" />
           <entry key="Scratch" value="35" />
         </counts>
@@ -163,27 +163,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SNChatClient/src/ChatFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2092">
-              <caret line="323" column="86" selection-start-line="323" selection-start-column="86" selection-end-line="323" selection-end-column="86" />
+            <state relative-caret-position="3009">
+              <caret line="179" column="41" selection-start-line="179" selection-start-column="41" selection-end-line="179" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SNChatServer/src/servBin/Server1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-96">
-              <caret line="172" column="36" selection-start-line="172" selection-start-column="36" selection-end-line="172" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#545#546#0" expanded="true" />
-                <element signature="e#607#608#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -192,21 +178,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SNChatClient/src/LoginFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SNChatClient/src/xs.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SNChatClient/src/Kek.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-434">
+            <state relative-caret-position="-700">
+              <caret line="45" column="70" selection-start-line="45" selection-start-column="70" selection-end-line="45" selection-end-column="70" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -215,73 +188,38 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SNChatClient/res/recycle.bin/ChatFrame.java">
+        <entry file="file://$PROJECT_DIR$/SNChatServer/src/servBin/Server1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="266" column="47" selection-start-line="266" selection-start-column="47" selection-end-line="266" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SNChatClient/src/bin/Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SNChatClient/res/Шаблон для сообщений 3.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="632">
-              <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+            <state relative-caret-position="-238">
+              <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#span#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#span#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#span#0;n#span#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#small#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#small#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#span#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#span#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#span#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#1145#1151#1" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#span#0;n#span#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#small#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#small#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#span#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#span#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#span#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#1887#1893#1" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#span#0;n#span#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#small#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#small#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#span#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SNChatClient/src/bin/Abstractions/ChatFrame.java">
+        <entry file="file://$PROJECT_DIR$/SNChatClient/xs.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="229" column="20" selection-start-line="229" selection-start-column="20" selection-end-line="229" selection-end-column="20" />
+            <state relative-caret-position="238">
+              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SNChatClient/src/Kek.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="141" selection-start-line="141" selection-end-line="141" />
               <folding>
-                <element signature="e#483#572#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -347,7 +285,6 @@
         <option value="$PROJECT_DIR$/src/bin/LoginFrame.java" />
         <option value="$PROJECT_DIR$/src/bin/ChatFrame.java" />
         <option value="$PROJECT_DIR$/src/servBin/Server1.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/SNChatClient/src/bin/ChatFrame1.java" />
         <option value="$PROJECT_DIR$/SNChatClient/src/bin/Smiles.java" />
         <option value="$PROJECT_DIR$/SNChatClient/src/bin/ResourceManager.java" />
@@ -356,12 +293,14 @@
         <option value="$PROJECT_DIR$/SNChatClient/src/bin/ChatFrame.java" />
         <option value="$PROJECT_DIR$/SNChatClient/res/recycle.bin/ChatFrame.java" />
         <option value="$PROJECT_DIR$/SNChatClient/src/bin/Kek.java" />
-        <option value="$PROJECT_DIR$/SNChatClient/src/Kek.java" />
-        <option value="$PROJECT_DIR$/SNChatClient/src/LoginFrame.java" />
         <option value="$PROJECT_DIR$/SNChatClient/res/Шаблон для сообщений 3.html" />
         <option value="$PROJECT_DIR$/SNChatClient/src/bin/Test.java" />
-        <option value="$PROJECT_DIR$/SNChatClient/src/ChatFrame.java" />
+        <option value="$PROJECT_DIR$/SNChatClient/res/ChatFrame.java" />
+        <option value="$PROJECT_DIR$/SNChatClient/src/LoginFrame.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/SNChatClient/src/Kek.java" />
         <option value="$PROJECT_DIR$/SNChatServer/src/servBin/Server1.java" />
+        <option value="$PROJECT_DIR$/SNChatClient/src/ChatFrame.java" />
       </list>
     </option>
   </component>
@@ -402,18 +341,6 @@
             </path>
             <path>
               <item name="SNchat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SNChatClient" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SNchat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SNChatClient" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SNchat" type="b2602c69:ProjectViewProjectNode" />
               <item name="SNChatServer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -441,7 +368,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE" value="ToolWindow" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541271953423" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541275359699" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/Edit As Language" value="GenericSQL" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="database.data.extractors.current.id" value="SQL Inserts" />
@@ -456,24 +383,25 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dmitr\OneDrive\IdeaProj\SambekChat\SNChatClient" />
       <recent name="C:\Users\dmitr\OneDrive\IdeaProj\SambekChat\SNChatClient\src" />
-      <recent name="C:\Users\dmitr\OneDrive\IdeaProj\SambekChat\SNChatClient\src\bin" />
+      <recent name="C:\Users\dmitr\OneDrive\IdeaProj\SambekChat\SNChatClient\res\images" />
       <recent name="C:\Users\dmitr\OneDrive\IdeaProj\SambekChat\SNChatClient\res" />
-      <recent name="C:\Users\dmitr\OneDrive\IdeaProj\SambekChat\SNChatClient\src\images" />
-      <recent name="C:\Users\dmitr\OneDrive\IdeaProj\SambekChat\SNChatClient\src\bin\smiles" />
+      <recent name="C:\Users\dmitr\OneDrive\IdeaProj\SambekChat\SNChatClient\res\recycle.bin" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
       <recent name="bin" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dmitr\OneDrive\IdeaProj\SambekChat\SNChatClient" />
       <recent name="C:\Users\dmitr\OneDrive\IdeaProj\SambekChat\SNChatClient\res" />
       <recent name="C:\Users\dmitr\OneDrive\IdeaProj\SambekChat\SNChatClient\src\bin" />
       <recent name="C:\Users\dmitr\OneDrive\IdeaProj\SambekChat\SNChatClient\src" />
       <recent name="C:\Users\dmitr\OneDrive\IdeaProj\SambekChat\SNChatClient\res\images" />
-      <recent name="C:\Users\dmitr\OneDrive\IdeaProj\SambekChat\SNChatServer\libr" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -596,7 +524,7 @@
       <workItem from="1541085853958" duration="39000" />
       <workItem from="1541157390442" duration="26294000" />
       <workItem from="1541189789187" duration="2594000" />
-      <workItem from="1541226778864" duration="35480000" />
+      <workItem from="1541226778864" duration="38936000" />
     </task>
     <task id="LOCAL-00001" summary="re">
       <created>1540763618055</created>
@@ -609,17 +537,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130738000" />
+    <option name="totallyTimeSpent" value="134194000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info x="575" y="204" width="450" height="451" id="UI Designer" order="1" weight="0.22557841" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.25449872" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.25449872" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.32884097" />
       <window_info anchor="bottom" id="Version Control" order="1" show_stripe_button="false" />
@@ -674,112 +603,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SNChatServer/src/servBin/Server2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SNChatClient/res/LoginFrame.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SNChatClient/src/bin/Abstractions/NewFrame1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SNChatClient/src/bin/Abstractions/NewJFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="211" column="27" selection-start-line="211" selection-start-column="27" selection-end-line="211" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-11/lib/src.zip!/java.desktop/java/awt/event/ActionListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SNChatClient/res/images/1f642.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SNChatClient/res/1f642.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SNChatClient/src/images/volume-24-24-0.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SNChatClient/src/bin/Smiles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-422">
-          <caret line="77" column="43" selection-start-line="77" selection-start-column="43" selection-end-line="77" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SNChatClient/src/bin/ResourceManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="101" column="14" selection-start-line="101" selection-start-column="14" selection-end-line="101" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SNChatClient/src/bin/SmilesMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="79" column="9" lean-forward="true" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SNChatClient/src/images/chatRoom16.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SNChatClient/src/images/chatRoom32.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SNChatClient/src/images/playpause-24-24-0.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SNChatClient/src/bin/smile11.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SNChatClient/res/ChatFrame.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SNChatClient/src/images/men.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SNChatClient/src/images/red.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SNChatClient/src/images/chat.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SNChatClient/src/images/send.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SNChatClient/src/images/close.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SNChatClient/src/images/green.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SNChatClient/src/images/online.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/SNChatClient/src/images/favicon.ico">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -849,32 +672,6 @@
     <entry file="file://$PROJECT_DIR$/SNChatClient/src/bin/smile04.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/SNChatClient/res/recycle.bin/ChatFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="266" column="47" selection-start-line="266" selection-start-column="47" selection-end-line="266" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SNChatClient/src/Kek.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-434">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SNChatClient/src/LoginFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SNChatClient/src/xs.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/SNChatClient/res/Шаблон для сообщений 3.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="632">
@@ -933,10 +730,103 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SNChatClient/src/ChatFrame.java">
+    <entry file="file://$PROJECT_DIR$/SNChatClient/src/images/smiless/smile02.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SNChatClient/src/images/smiless/smile03.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SNChatClient/src/images/smiless/smile04.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SNChatClient/src/images/smiless/smile05.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SNChatClient/src/images/smiless/smile06.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SNChatClient/src/images/smiless/smile07.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SNChatClient/src/images/smiless/smile09.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SNChatClient/src/images/smiless/smile08.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SNChatClient/src/images/smiless/smile01.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SNChatClient/src/images/smiless/smile00.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SNChatClient/res/recycle.bin/ChatFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2092">
-          <caret line="323" column="86" selection-start-line="323" selection-start-column="86" selection-end-line="323" selection-end-column="86" />
+        <state relative-caret-position="901">
+          <caret line="266" column="47" selection-start-line="266" selection-start-column="47" selection-end-line="266" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SNChatClient/src/images/smiles/smile00.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SNChatClient/src/images/smiles/smile01.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SNChatClient/src/images/smiles/smile02.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SNChatClient/src/images/smiles/smile03.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SNChatClient/src/images/smiles/smile04.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SNChatClient/src/images/smiles/smile05.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SNChatClient/src/images/smiles/smile06.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SNChatClient/src/images/smiles/smile07.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SNChatClient/src/images/smiles/smile08.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SNChatClient/src/images/smiles/smile09.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SNChatClient/res/ChatFrame.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SNChatClient/res/xs.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SNChatClient/xs.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SNChatClient/src/Kek.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="141" selection-start-line="141" selection-end-line="141" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SNChatClient/src/LoginFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-700">
+          <caret line="45" column="70" selection-start-line="45" selection-start-column="70" selection-end-line="45" selection-end-column="70" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -945,12 +835,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SNChatServer/src/servBin/Server1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-96">
-          <caret line="172" column="36" selection-start-line="172" selection-start-column="36" selection-end-line="172" selection-end-column="36" />
+        <state relative-caret-position="-238">
+          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#545#546#0" expanded="true" />
-            <element signature="e#607#608#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SNChatClient/src/ChatFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3009">
+          <caret line="179" column="41" selection-start-line="179" selection-start-column="41" selection-end-line="179" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -7,6 +7,7 @@ import java.net.Socket;
 import java.util.Arrays;
 
 public class Kek {
+    static volatile String currentServerMessage = null;
     public static final String VERSION = "SambekChat";
     static volatile Socket socket;
     static volatile DataInputStream dataInputStream;
@@ -125,6 +126,21 @@ public class Kek {
         }.start();
 
 
+    }
+
+    static String serverMessage(){
+        String text = "";
+        text = currentServerMessage;
+        return text;
+    }
+
+    static void serverMessage1(String s){
+        currentServerMessage = s;
+        try {
+            cf.onlinePanel.setText(s);
+        } catch (Exception e){
+
+        }
     }
 
 }

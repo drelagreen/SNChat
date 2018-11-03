@@ -43,7 +43,7 @@ public class LoginFrame extends NewJFrame {
 
 
     LoginFrame() {
-        trayIcon = new TrayIcon(Toolkit.getDefaultToolkit().getImage("/xs.png"), "ВЫХОД ИЗ ЧАТА");
+        trayIcon = new TrayIcon(Toolkit.getDefaultToolkit().getImage("xs.png"), "ВЫХОД ИЗ ЧАТА");
         tray = SystemTray.getSystemTray();
         trayIcon.setImageAutoSize(true);
         try {
