@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bin;
 
 import bin.Abstractions.NewJFrame;
 
@@ -16,7 +15,6 @@ import java.awt.event.KeyListener;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import static bin.Kek.login;
 
 /**
  * @author drelagreen
@@ -45,7 +43,7 @@ public class LoginFrame extends NewJFrame {
 
 
     LoginFrame() {
-        trayIcon = new TrayIcon(Toolkit.getDefaultToolkit().getImage("res/images/xs.png"), "ВЫХОД ИЗ ЧАТА");
+        trayIcon = new TrayIcon(Toolkit.getDefaultToolkit().getImage("/xs.png"), "ВЫХОД ИЗ ЧАТА");
         tray = SystemTray.getSystemTray();
         trayIcon.setImageAutoSize(true);
         try {
@@ -110,7 +108,7 @@ public class LoginFrame extends NewJFrame {
                 char[] pass = passField.getPassword();
 
                 if (!login.equals("") && !ip.equals(""))
-                    login(login, pass, ip);
+                    Kek.login(login, pass, ip);
 
                 if (Kek.isConnected) {
                     connectionLabel.setText(" Входим...");

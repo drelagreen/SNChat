@@ -1,14 +1,14 @@
-package bin;
-
-
-public class Test {
-    public static void main(String[] args) {
-        Kek.cf = new ChatFrame();
-        Kek.cf.setVisible(true);
-    }
-}
-//        mat();
+//package bin;
+//
+//
+//public class Test {
+//    public static void main(String[] args) {
+//        Kek.cf = new ChatFrame();
+//        Kek.cf.setVisible(true);
 //    }
+//}
+////        mat();
+////    }
 //
 //    static void mat() {
 //        String text = new Scanner(System.in).nextLine();

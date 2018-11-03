@@ -1,4 +1,4 @@
-package bin;
+
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

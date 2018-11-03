@@ -9,7 +9,7 @@ package recycle.bin;
  *
  * @author drelagreen
  */
-public abstract class ChatFrame extends javax.swing.JFrame {
+public class ChatFrame extends javax.swing.JFrame {
 
     /**
      * Creates new form ChatFrame

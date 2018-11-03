@@ -152,10 +152,6 @@ public class Server1 {
     private static String inHtml(String nick, String text){
         Date date = new Date();
         text = replacer(text);
-        String url = avatar.get(nick);
-        text = text.replace("#!","<span\n" +
-                "style=\"text-decoration: underline;\">");
-        text = text.replace("!#","</span>");
         String[] kek= text.split("");
         if (kek.length>41){
             String temp="<p style=\"font-weight: bold; font-family: Arial;\">";
@@ -166,6 +162,24 @@ public class Server1 {
             temp+="</p><p></p>";
             text = temp;
         }
+        String url = avatar.get(nick);
+        text = text.replace("#!","<span\n" +
+                "style=\"text-decoration: underline;\">");
+        text = text.replace("!#","</span>");
+        text = text.replace(":fun:","<img src=\"https://images.vfl.ru/ii/1541271567/43c87ebd/24052847_m.png\" alt=\"smile00\" title=\"smile00\" border=\"0\">");
+        text = text.replace(":yeah:","<img src=\"https://images.vfl.ru/ii/1541271567/64f7f8a8/24052848_m.png\" alt=\"smile01\" title=\"smile01\" border=\"0\">");
+        text = text.replace(":yee","<img src=\"https://images.vfl.ru/ii/1541270842/96d62355/24052624_m.png\" alt=\"smile02\" title=\"smile02\" border=\"0\">");
+        text = text.replace( ":cool:" , "<img src=\"https://images.vfl.ru/ii/1541270842/9fefd486/24052625_m.png\" alt=\"smile03\" title=\"smile03\" border=\"0\">");
+        text = text.replace(":chmok:","<img src=\"https://images.vfl.ru/ii/1541270842/c2982f13/24052626_m.png\" alt=\"smile04\" title=\"smile04\" border=\"0\">");
+        text = text.replace(":wow:","<img src=\"https://images.vfl.ru/ii/1541270842/5a7c4f81/24052627_m.png\" alt=\"smile05\" title=\"smile05\" border=\"0\">");
+        text = text.replace(":XD:","<img src=\"https://images.vfl.ru/ii/1541270842/6e5a373f/24052628_m.png\" alt=\"smile06\" title=\"smile06\" border=\"0\">");
+        text = text.replace(":verysad:","<img src=\"https://images.vfl.ru/ii/1541270842/d0bcfd6a/24052629_m.png\" alt=\"smile07\" title=\"smile07\" border=\"0\">");
+        text = text.replace(":sad:","<img src=\"https://images.vfl.ru/ii/1541270842/7e2b953b/24052630_m.png\" alt=\"smile08\" title=\"smile08\" border=\"0\">");
+        text = text.replace(":angry:","<img src=\"https://images.vfl.ru/ii/1541270842/fcfa8f9c/24052631_m.png\" alt=\"smile09\" title=\"smile09\" border=\"0\">");
+        text = text.replace(":hmm:","<img src=\"https://images.vfl.ru/ii/1541270842/476d5e59/24052632_m.png\" alt=\"smile10\" title=\"smile10\" border=\"0\">");
+        text = text.replace(":smert:","<img src=\"https://images.vfl.ru/ii/1541270842/7bb3d002/24052633_m.png\" alt=\"smile11\" title=\"smile11\" border=\"0\">");
+
+
 
         String xx = "<div style=\"background-color: rgb(153, 153, 153);\"><span\n" +
                 "style=\"font-weight: bold; color: black;\"> <img\n" +
@@ -211,7 +225,7 @@ public class Server1 {
         kek.put("епта", flower());
         kek.put("ёпта", flower());
         kek.put("говно", flower());
-        kek.put("моча", flower());
+        kek.put("гавно", flower());
         String text1=text;
         for (Map.Entry entry : kek.entrySet()) {
             text = text.toLowerCase().replaceAll(entry.getKey().toString(), entry.getValue().toString());
