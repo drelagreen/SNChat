@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SNChatServer:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SNChatServer_jar</output-path>
+    <root id="archive" name="SNChatServer.jar">
+      <element id="module-output" name="SNChatServer" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/SNChatServer/libr/mysql-connector-java-5.1.42-bin.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
