@@ -90,7 +90,7 @@
           <entry key="MF" value="3" />
           <entry key="css" value="1" />
           <entry key="form" value="9" />
-          <entry key="gitignore" value="4" />
+          <entry key="gitignore" value="5" />
           <entry key="groovy" value="3" />
           <entry key="html" value="9" />
           <entry key="http" value="1" />
@@ -120,7 +120,7 @@
           <entry key="JAVA" value="79" />
           <entry key="Manifest" value="3" />
           <entry key="Markdown" value="5" />
-          <entry key="PLAIN_TEXT" value="8" />
+          <entry key="PLAIN_TEXT" value="9" />
           <entry key="SQL" value="1" />
           <entry key="SWF" value="1" />
           <entry key="Scratch" value="9" />
@@ -132,7 +132,7 @@
           <entry key="cell" value="27" />
           <entry key="css" value="55" />
           <entry key="dummy" value="6" />
-          <entry key="gitignore" value="7" />
+          <entry key="gitignore" value="8" />
           <entry key="html" value="621" />
           <entry key="iml" value="16" />
           <entry key="java" value="10515" />
@@ -149,7 +149,7 @@
           <entry key="JAVA" value="10515" />
           <entry key="Manifest" value="6" />
           <entry key="Markdown" value="529" />
-          <entry key="PLAIN_TEXT" value="50" />
+          <entry key="PLAIN_TEXT" value="51" />
           <entry key="SQL" value="64" />
           <entry key="Scratch" value="35" />
         </counts>
@@ -213,10 +213,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SNChatClient/src/bin/Kek.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="117" selection-start-line="117" selection-end-line="117" />
+            <state relative-caret-position="187">
+              <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -288,12 +297,12 @@
         <option value="$PROJECT_DIR$/src/bin/Test.java" />
         <option value="$PROJECT_DIR$/html.html" />
         <option value="$PROJECT_DIR$/src/servBin/T.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/bin/Abstractions/ChatFrame.java" />
         <option value="$PROJECT_DIR$/src/bin/Kek.java" />
         <option value="$PROJECT_DIR$/src/bin/LoginFrame.java" />
         <option value="$PROJECT_DIR$/src/bin/ChatFrame.java" />
         <option value="$PROJECT_DIR$/src/servBin/Server1.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -329,29 +338,12 @@
             </path>
             <path>
               <item name="SNchat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SNChatClient" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SNchat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SNChatClient" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SNchat" type="b2602c69:ProjectViewProjectNode" />
               <item name="SNChatServer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SNchat" type="b2602c69:ProjectViewProjectNode" />
               <item name="SNChatServer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SNchat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SNChatServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="servBin" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -367,7 +359,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE" value="ToolWindow" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541236806420" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541236834906" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/Edit As Language" value="GenericSQL" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="database.data.extractors.current.id" value="SQL Inserts" />
@@ -519,7 +511,7 @@
       <workItem from="1541085853958" duration="39000" />
       <workItem from="1541157390442" duration="26294000" />
       <workItem from="1541189789187" duration="2594000" />
-      <workItem from="1541226778864" duration="9717000" />
+      <workItem from="1541226778864" duration="9988000" />
     </task>
     <task id="LOCAL-00001" summary="re">
       <created>1540763618055</created>
@@ -532,10 +524,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104975000" />
+    <option name="totallyTimeSpent" value="105246000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info x="575" y="204" width="450" height="451" id="UI Designer" order="1" weight="0.22557841" />
@@ -828,13 +821,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SNChatClient/res/images/xs.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -900,11 +886,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SNChatClient/src/bin/Kek.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="117" selection-start-line="117" selection-end-line="117" />
+        <state relative-caret-position="187">
+          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
@@ -919,6 +912,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -961,7 +955,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>SNChatClient</last-edited>
+          <last-edited>SNChatServer</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
