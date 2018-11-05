@@ -125,13 +125,7 @@ public class Server1 {
 
     static void dataBaseConnect() {
         System.out.println("Идет анализ базы данных...");
-//        try {
-//            Class.forName("mysql-connector-java-5.1.42-bin.jar");
-//        } catch (ClassNotFoundException e) {
-//            e.printStackTrace();
-//        }
         String query = "select nickname,password,avatar from users;";
-
         String url = "jdbc:mysql://den1.mysql6.gear.host:3306/mydb241";
         String user = "mydb241";
         String password = "Sambek241_";
@@ -164,11 +158,11 @@ public class Server1 {
         Date date = new Date();
         text = replacer(text);
         String[] kek= text.split("");
-        if (kek.length>41){
+        if (kek.length>50){
             String temp="<p style=\"font-weight: bold; font-family: Arial;\">";
             for (int i = 0; i < kek.length; i+=1) {
                 temp+=kek[i];
-                if (i%41==0&&i!=0) temp+="</p><p style=\"font-weight: bold; font-family: Arial;\">";
+                if (i%50==0&&i!=0){ temp+="</p><p style=\"font-weight: bold; font-family: Arial;\">";}
             }
             temp+="</p><p></p>";
             text = temp;
@@ -179,7 +173,7 @@ public class Server1 {
         text = text.replace("!#","</span>");
         text = text.replace(":fun:","<img src=\"https://images.vfl.ru/ii/1541271567/43c87ebd/24052847_m.png\" alt=\"smile00\" title=\"smile00\" border=\"0\">");
         text = text.replace(":yeah:","<img src=\"https://images.vfl.ru/ii/1541271567/64f7f8a8/24052848_m.png\" alt=\"smile01\" title=\"smile01\" border=\"0\">");
-        text = text.replace(":yee","<img src=\"https://images.vfl.ru/ii/1541270842/96d62355/24052624_m.png\" alt=\"smile02\" title=\"smile02\" border=\"0\">");
+        text = text.replace(":yee:","<img src=\"https://images.vfl.ru/ii/1541270842/96d62355/24052624_m.png\" alt=\"smile02\" title=\"smile02\" border=\"0\">");
         text = text.replace( ":cool:" , "<img src=\"https://images.vfl.ru/ii/1541270842/9fefd486/24052625_m.png\" alt=\"smile03\" title=\"smile03\" border=\"0\">");
         text = text.replace(":chmok:","<img src=\"https://images.vfl.ru/ii/1541270842/c2982f13/24052626_m.png\" alt=\"smile04\" title=\"smile04\" border=\"0\">");
         text = text.replace(":wow:","<img src=\"https://images.vfl.ru/ii/1541270842/5a7c4f81/24052627_m.png\" alt=\"smile05\" title=\"smile05\" border=\"0\">");

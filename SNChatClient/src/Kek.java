@@ -7,7 +7,7 @@ import java.net.Socket;
 import java.util.Arrays;
 
 public class Kek {
-    static volatile String currentServerMessage = null;
+    static volatile String currentServerMessage = "";
     public static final String VERSION = "SambekChat";
     static volatile Socket socket;
     static volatile DataInputStream dataInputStream;
@@ -130,7 +130,9 @@ public class Kek {
 
     static String serverMessage(){
         String text = "";
+
         text = currentServerMessage;
+
         return text;
     }
 

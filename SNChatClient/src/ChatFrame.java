@@ -8,8 +8,9 @@ import java.awt.event.KeyListener;
 
 public class ChatFrame extends bin.Abstractions.ChatFrame {
     boolean x = true;
+    JButton smilesButton;
     private javax.swing.JScrollPane jScrollPane2;
-   javax.swing.JEditorPane onlinePanel;
+    javax.swing.JEditorPane onlinePanel;
     private javax.swing.JLayeredPane smilesPannel;
     private javax.swing.JButton js1;
     private javax.swing.JButton js10;
@@ -52,7 +53,8 @@ public class ChatFrame extends bin.Abstractions.ChatFrame {
             }
         });
 
-        JButton smilesButton = new JButton(new javax.swing.ImageIcon(getClass().getResource("/images/1f642.png"))) ;
+
+        smilesButton = new JButton(new ImageIcon(getClass().getResource("/images/1f642.png")));
         JToggleButton trayMBut = new JToggleButton(new javax.swing.ImageIcon(getClass().getResource("/images/2755_2x.png")));
         trayMBut.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/2757_2x.png")));
 
@@ -80,7 +82,7 @@ public class ChatFrame extends bin.Abstractions.ChatFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (!trayMBut.isSelected())
-                tray.remove(trayIcon);
+                    tray.remove(trayIcon);
                 else {
                     try {
                         tray.add(trayIcon);
@@ -103,12 +105,13 @@ public class ChatFrame extends bin.Abstractions.ChatFrame {
         chatField.setText("<div></div>");
         setTitle("SNchat");
         tittle();
-    chatField.setSize(1000,1000);
-    setSize(730,530);
-    this.setLocationRelativeTo(null);
+        chatField.setSize(1000,1000);
+        setSize(730,530);
+        this.setLocationRelativeTo(null);
 
         button.addActionListener(e -> {
             sendMessage();
+            if (!x) smilesButton.doClick();
             messageField.setText("");
         });
         messageField.addKeyListener(new KeyListener() {
@@ -119,13 +122,13 @@ public class ChatFrame extends bin.Abstractions.ChatFrame {
 
             @Override
             public void keyPressed(KeyEvent e) {
-            if (!e.isShiftDown()&&e.getKeyCode()==KeyEvent.VK_ENTER){
-                button.doClick();
+                if (!e.isShiftDown()&&e.getKeyCode()==KeyEvent.VK_ENTER){
+                    button.doClick();
 
-            }
-            if (e.isShiftDown()&&e.getKeyCode()==KeyEvent.VK_ENTER){
-                messageField.setText(messageField.getText()+"\n");
-            }
+                }
+                if (e.isShiftDown()&&e.getKeyCode()==KeyEvent.VK_ENTER){
+                    messageField.setText(messageField.getText()+"\n");
+                }
             }
 
             @Override
@@ -135,23 +138,23 @@ public class ChatFrame extends bin.Abstractions.ChatFrame {
                 }
             }
         });
-    smilesButton.addActionListener(new ActionListener() {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            if (!x){
-                hzPanel.remove(smilesPannel);
-                initOnlinePanel();
-                hzPanel.updateUI();
-                smilesButton.updateUI();
-                onlinePanel.setText(Kek.serverMessage());
-            x=!x;
-            } else{
-                smilesInit();
-                hzPanel.add(smilesPannel,1);
-                x=!x;
+        smilesButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (!x){
+                    hzPanel.remove(smilesPannel);
+                    initOnlinePanel();
+                    hzPanel.updateUI();
+                    smilesButton.updateUI();
+                    Kek.serverMessage();
+                    x=!x;
+                } else{
+                    smilesInit();
+                    hzPanel.add(smilesPannel,1);
+                    x=!x;
+                }
             }
-        }
-    });
+        });
         hzPanel.remove(smilesPannel);
         initOnlinePanel();
         hzPanel.updateUI();
@@ -178,14 +181,14 @@ public class ChatFrame extends bin.Abstractions.ChatFrame {
             }
             text=temp2;
         } else if (temp[0].equals("nc")){
-                temp[0]="";
+            temp[0]="";
             String temp2="";
             for (String s : temp) {
                 temp2+=s+" ";
             }
             text=temp2;
             if(!html.equalsIgnoreCase(""))
-            trayIcon.displayMessage("SNChat","Новое подключение!", TrayIcon.MessageType.NONE);
+                trayIcon.displayMessage("SNChat","Новое подключение!", TrayIcon.MessageType.NONE);
 
         } else if (temp[0].equals("sm")){
             temp[0]="";
@@ -194,6 +197,7 @@ public class ChatFrame extends bin.Abstractions.ChatFrame {
                 temp2+=s+" ";
             }
             text=temp2;
+            if(!x) smilesButton.doClick();
             Kek.serverMessage1(text);
             text="";
         }
@@ -206,44 +210,44 @@ public class ChatFrame extends bin.Abstractions.ChatFrame {
 
     public void tittle(){
         new Thread(()->{
-           while (true){
-               this.setTitle("SNchat");
-              try {
-                   Thread.sleep(2000);
-               } catch (InterruptedException e) {
-                   e.printStackTrace();
-               }
-               setTitle("sNChat");
-               try {
-                   Thread.sleep(2000);
-               } catch (InterruptedException e) {
-                   e.printStackTrace();
-               }
-               setTitle("snCHat");
-               try {
-                   Thread.sleep(2000);
-               } catch (InterruptedException e) {
-                   e.printStackTrace();
-               }
-               this.setTitle("sncHAt");
-               try {
-                   Thread.sleep(2000);
-               } catch (InterruptedException e) {
-                   e.printStackTrace();
-               }
-               this.setTitle("snchAT");
-               try {
-                   Thread.sleep(2000);
-               } catch (InterruptedException e) {
-                   e.printStackTrace();
-               }
-               this.setTitle("SnchaT");
-               try {
-                   Thread.sleep(2000);
-               } catch (InterruptedException e) {
-                   e.printStackTrace();
-               }
-           }
+            while (true){
+                this.setTitle("SNchat");
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                setTitle("sNChat");
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                setTitle("snCHat");
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                this.setTitle("sncHAt");
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                this.setTitle("snchAT");
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                this.setTitle("SnchaT");
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
         });
     }
 
@@ -440,5 +444,6 @@ public class ChatFrame extends bin.Abstractions.ChatFrame {
                 hzPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
         );
+        onlinePanel.setFont(new java.awt.Font("Arial", 1, 16));
     }
-    }
+}
