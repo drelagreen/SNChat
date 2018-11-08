@@ -7,14 +7,13 @@ import java.net.Socket;
 import java.util.Arrays;
 
 public class Kek {
-    static volatile String currentServerMessage = "";
-    public static final String VERSION = "SambekChat";
-    static volatile Socket socket;
-    static volatile DataInputStream dataInputStream;
-    static volatile DataOutputStream dataOutputStream;
+    private static volatile String currentServerMessage = "";
+    private static volatile Socket socket;
+    private static volatile DataInputStream dataInputStream;
+    private static volatile DataOutputStream dataOutputStream;
     static boolean isConnected = false;
-    static volatile LoginFrame lf;
-    static volatile ChatFrame cf;
+    private static volatile LoginFrame lf;
+    private static volatile ChatFrame cf;
 
     public static void main(String[] args) {
         lf = new LoginFrame();
@@ -44,7 +43,7 @@ public class Kek {
 
     }
 
-    public static void turn2() {
+    static void turn2() {
         System.out.println("OK");
         lf.logButton.setEnabled(false);
         lf.setVisible(false);
@@ -54,51 +53,7 @@ public class Kek {
     }
 
 
-
-
-//    public static void sCom() {
-//        new Thread(() -> {
-//           while (true){
-//               try {
-//                   String s = dataInputStream.readUTF();
-//                   System.out.println("new email");
-//                   String t[] = s.split("");
-//                   switch (t[0]){
-//                       case ("1"):
-//                           StringBuilder x = new StringBuilder();
-//                           t[0]="";
-//                           for (String s1 : t) {
-//                               x.append(s1);
-//                           }
-//                           g2.print(x.toString());
-//                           break;
-//                       case ("3"):
-//                           StringBuilder y = new StringBuilder();
-//                           t[0]="";
-//                           for (String s1 : t) {
-//                               y.append(s1);
-//                           }
-//                           g2.print2(y.toString());
-//                           break;
-//                       case "N":
-//                           StringBuilder z = new StringBuilder();
-//                           t[0]="";
-//                           for (String s1 : t) {
-//                               z.append(s1);
-//                           }
-//                           nickname = z.toString();
-//                           break;
-//
-//                   }
-//               } catch (IOException e) {
-//                   e.printStackTrace();
-//                   break;
-//               }
-//           }
-//        }).start();
-//    }
-
-    public static void outToServer(String text){
+    static void outToServer(String text){
         try {
             dataOutputStream.writeUTF(text);
             System.out.println("Исходящее сообщение:" +text);
@@ -107,7 +62,7 @@ public class Kek {
             e.printStackTrace();
         }
     }
-    public static void fromServer(){
+    private static void fromServer(){
         new Thread(){
             @Override
             public void run() {
@@ -119,7 +74,7 @@ public class Kek {
 
                     } catch (IOException e) {
                         e.printStackTrace();
-                        while(true);
+                        interrupt();
                     }
                 }
             }
@@ -128,19 +83,17 @@ public class Kek {
 
     }
 
-    static String serverMessage(){
-        String text = "";
-
+    static String getServerMessage(){
+        String text;
         text = currentServerMessage;
-
         return text;
     }
 
-    static void serverMessage1(String s){
+    static void setServerMessage(String s){
         currentServerMessage = s;
         try {
             cf.onlinePanel.setText(s);
-        } catch (Exception e){
+        } catch (Exception ignored){
 
         }
     }

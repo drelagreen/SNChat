@@ -1,44 +1,23 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 
 public class ChatFrame extends bin.Abstractions.ChatFrame {
-    boolean x = true;
-    JButton smilesButton;
-    private javax.swing.JScrollPane jScrollPane2;
+    private boolean x = true;
+    private JButton smilesButton;
     javax.swing.JEditorPane onlinePanel;
-    private javax.swing.JLayeredPane smilesPannel;
-    private javax.swing.JButton js1;
-    private javax.swing.JButton js10;
-    private javax.swing.JButton js11;
-    private javax.swing.JButton js12;
-    private javax.swing.JButton js2;
-    private javax.swing.JButton js3;
-    private javax.swing.JButton js4;
-    private javax.swing.JButton js5;
-    private javax.swing.JButton js6;
-    private javax.swing.JButton js7;
-    private javax.swing.JButton js8;
-    private javax.swing.JButton js9;
-
+    private javax.swing.JLayeredPane smilesPanel;
     private String html = "";
     private TrayIcon trayIcon;
     private SystemTray tray;
+
     ChatFrame() {
         initOnlinePanel();
         smilesInit();
 
-
-//        JTextPane online = new JTextPane();
-//        hzPanel.add(new JScrollPane(online));
-//        online.setText("ddddddddddddddddddddddddddssssssssssssssssssssssssssssddddddddddddddddddddddddsssssssssssss");
-
-
-        trayIcon = new TrayIcon(Toolkit.getDefaultToolkit().getImage("xs.png"), "ВЫХОД ИЗ ЧАТА");
+        trayIcon = new TrayIcon(Toolkit.getDefaultToolkit().getImage("xs.png"), "EXIT FROM THE CHAT");
         tray = SystemTray.getSystemTray();
         trayIcon.setImageAutoSize(true);
         try {
@@ -46,12 +25,7 @@ public class ChatFrame extends bin.Abstractions.ChatFrame {
         } catch (AWTException e) {
             System.err.println("TrayIcon could not be added.");
         }
-        trayIcon.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.exit(0);
-            }
-        });
+        trayIcon.addActionListener(e -> System.exit(0));
 
 
         smilesButton = new JButton(new ImageIcon(getClass().getResource("/images/1f642.png")));
@@ -78,21 +52,18 @@ public class ChatFrame extends bin.Abstractions.ChatFrame {
         );
         trayMBut.doClick();
         trayMBut.setBackground(new Color(102,102,102));
-        trayMBut.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (!trayMBut.isSelected())
-                    tray.remove(trayIcon);
-                else {
-                    try {
-                        tray.add(trayIcon);
-                        trayIcon.displayMessage("Переключатель","Вы включили всплывающие уведомления!", TrayIcon.MessageType.NONE);
-                    } catch (AWTException e1) {
-                        e1.printStackTrace();
-                    }
+        trayMBut.addActionListener(e -> {
+            if (!trayMBut.isSelected())
+                tray.remove(trayIcon);
+            else {
+                try {
+                    tray.add(trayIcon);
+                    trayIcon.displayMessage("Переключатель","Вы включили всплывающие уведомления!", TrayIcon.MessageType.NONE);
+                } catch (AWTException e1) {
+                    e1.printStackTrace();
                 }
-
             }
+
         });
 
         messageField.setLineWrap(true);
@@ -103,8 +74,7 @@ public class ChatFrame extends bin.Abstractions.ChatFrame {
 
         chatField.setAutoscrolls(true);
         chatField.setText("<div></div>");
-        setTitle("SNchat");
-        tittle();
+        setTitle("SNChat");
         chatField.setSize(1000,1000);
         setSize(730,530);
         this.setLocationRelativeTo(null);
@@ -138,226 +108,138 @@ public class ChatFrame extends bin.Abstractions.ChatFrame {
                 }
             }
         });
-        smilesButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (!x){
-                    hzPanel.remove(smilesPannel);
-                    initOnlinePanel();
-                    hzPanel.updateUI();
-                    smilesButton.updateUI();
-                    Kek.serverMessage();
-                    x=!x;
-                } else{
-                    smilesInit();
-                    hzPanel.add(smilesPannel,1);
-                    x=!x;
-                }
+        smilesButton.addActionListener(e -> {
+            if (!x){
+                hzPanel.remove(smilesPanel);
+                initOnlinePanel();
+                hzPanel.updateUI();
+                smilesButton.updateUI();
+                Kek.getServerMessage();
+                x=!x;
+            } else{
+                smilesInit();
+                hzPanel.add(smilesPanel,1);
+                x=!x;
             }
         });
-        hzPanel.remove(smilesPannel);
+        hzPanel.remove(smilesPanel);
         initOnlinePanel();
         hzPanel.updateUI();
         smilesButton.updateUI();
-        onlinePanel.setText(Kek.serverMessage());
+        onlinePanel.setText(Kek.getServerMessage());
 
     }
 
 
-    public void sendMessage(){
+    private void sendMessage(){
         String s = messageField.getText();
         Kek.outToServer(s);
         messageField.setText(null);
     }
-    public void write(String text) {
+    void write(String text) {
 
         String temp[] = text.split(" ");
-        if (temp[0].equals("dis")){
-            trayIcon.displayMessage("SNChat","Один из участников чата отключился", TrayIcon.MessageType.NONE);
-            temp[0]="";
-            String temp2="";
-            for (String s : temp) {
-                temp2+=(s+" ");
+        switch (temp[0]) {
+            case "dis": {
+                trayIcon.displayMessage("SNChat", "Один из участников чата отключился", TrayIcon.MessageType.NONE);
+                temp[0] = "";
+                StringBuilder temp2 = new StringBuilder();
+                for (String s : temp) {
+                    temp2.append(s).append(" ");
+                }
+                text = temp2.toString();
+                break;
             }
-            text=temp2;
-        } else if (temp[0].equals("nc")){
-            temp[0]="";
-            String temp2="";
-            for (String s : temp) {
-                temp2+=s+" ";
-            }
-            text=temp2;
-            if(!html.equalsIgnoreCase(""))
-                trayIcon.displayMessage("SNChat","Новое подключение!", TrayIcon.MessageType.NONE);
+            case "nc": {
+                temp[0] = "";
+                StringBuilder temp2 = new StringBuilder();
+                for (String s : temp) {
+                    temp2.append(s).append(" ");
+                }
+                text = temp2.toString();
+                if (!html.equalsIgnoreCase(""))
+                    trayIcon.displayMessage("SNChat", "Новое подключение!", TrayIcon.MessageType.NONE);
 
-        } else if (temp[0].equals("sm")){
-            temp[0]="";
-            String temp2="";
-            for (String s : temp) {
-                temp2+=s+" ";
+                break;
             }
-            text=temp2;
-            if(!x) smilesButton.doClick();
-            Kek.serverMessage1(text);
-            text="";
+            case "sm": {
+                temp[0] = "";
+                StringBuilder temp2 = new StringBuilder();
+                for (String s : temp) {
+                    temp2.append(s).append(" ");
+                }
+                text = temp2.toString();
+                if (!x) smilesButton.doClick();
+                Kek.setServerMessage(text);
+                text = "";
+                break;
+            }
         }
-        if(text!="") {
+        if(!text.equals("")) {
             html = text + html;
             chatField.setText(html);
         }
     }
 
-
-    public void tittle(){
-        new Thread(()->{
-            while (true){
-                this.setTitle("SNchat");
-                try {
-                    Thread.sleep(2000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                setTitle("sNChat");
-                try {
-                    Thread.sleep(2000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                setTitle("snCHat");
-                try {
-                    Thread.sleep(2000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                this.setTitle("sncHAt");
-                try {
-                    Thread.sleep(2000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                this.setTitle("snchAT");
-                try {
-                    Thread.sleep(2000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                this.setTitle("SnchaT");
-                try {
-                    Thread.sleep(2000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-    }
-
-    void smilesInit() {
-        smilesPannel = new javax.swing.JLayeredPane();
-        js1 = new javax.swing.JButton();
-        js2 = new javax.swing.JButton();
-        js3 = new javax.swing.JButton();
-        js4 = new javax.swing.JButton();
-        js5 = new javax.swing.JButton();
-        js6 = new javax.swing.JButton();
-        js7 = new javax.swing.JButton();
-        js8 = new javax.swing.JButton();
-        js9 = new javax.swing.JButton();
-        js10 = new javax.swing.JButton();
-        js11 = new javax.swing.JButton();
-        js12 = new javax.swing.JButton();
+    private void smilesInit() {
+        smilesPanel = new javax.swing.JLayeredPane();
+        JButton js1 = new JButton();
+        JButton js2 = new JButton();
+        JButton js3 = new JButton();
+        JButton js4 = new JButton();
+        JButton js5 = new JButton();
+        JButton js6 = new JButton();
+        JButton js7 = new JButton();
+        JButton js8 = new JButton();
+        JButton js9 = new JButton();
+        JButton js10 = new JButton();
+        JButton js11 = new JButton();
+        JButton js12 = new JButton();
 
 
-        smilesPannel.setBackground(new java.awt.Color(153, 153, 153));
+        smilesPanel.setBackground(new java.awt.Color(153, 153, 153));
 
         js1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/smiles/smile00.png"))); // NOI18N
-        js1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                messageField.setText(messageField.getText()+":fun:");
-            }
-        });
+        js1.addActionListener(evt -> messageField.setText(messageField.getText()+":fun:"));
 
         js2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/smiles/smile01.png"))); // NOI18N
-        js2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                messageField.setText(messageField.getText()+":yeah:");
-            }
-        });
+        js2.addActionListener(evt -> messageField.setText(messageField.getText()+":yeah:"));
         js3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/smiles/smile02.png"))); // NOI18N
-        js3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                messageField.setText(messageField.getText()+":yee:");
-            }
-        });
+        js3.addActionListener(evt -> messageField.setText(messageField.getText()+":yee:"));
         js4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/smiles/smile03.png"))); // NOI18N
-        js4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                messageField.setText(messageField.getText()+":cool:");
-            }
-        });
+        js4.addActionListener(evt -> messageField.setText(messageField.getText()+":cool:"));
         js5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/smiles/smile04.png"))); // NOI18N
-        js5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                messageField.setText(messageField.getText()+":chmok:");
-            }
-        });
+        js5.addActionListener(evt -> messageField.setText(messageField.getText()+":chmok:"));
         js6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/smiles/smile05.png"))); // NOI18N
-        js6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                messageField.setText(messageField.getText()+":wow:");
-            }
-        });
+        js6.addActionListener(evt -> messageField.setText(messageField.getText()+":wow:"));
         js7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/smiles/smile06.png"))); // NOI18N
-        js7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                messageField.setText(messageField.getText()+":XD:");
-            }
-        });
+        js7.addActionListener(evt -> messageField.setText(messageField.getText()+":XD:"));
         js8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/smiles/smile07.png"))); // NOI18N
-        js8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                messageField.setText(messageField.getText()+":verysad:");
-            }
-        });
+        js8.addActionListener(evt -> messageField.setText(messageField.getText()+":verysad:"));
         js9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/smiles/smile08.png"))); // NOI18N
-        js9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                messageField.setText(messageField.getText()+":sad:");
-            }
-        });
+        js9.addActionListener(evt -> messageField.setText(messageField.getText()+":sad:"));
         js10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/smiles/smile09.png"))); // NOI18N
-        js10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                messageField.setText(messageField.getText()+":angry:");
-            }
-        });
+        js10.addActionListener(evt -> messageField.setText(messageField.getText()+":angry:"));
         js11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/smiles/smile10.png"))); // NOI18N
-        js11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                messageField.setText(messageField.getText()+":hmm:");
-            }
-        });
+        js11.addActionListener(evt -> messageField.setText(messageField.getText()+":hmm:"));
         js12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/smiles/smile11.png"))); // NOI18N
-        js12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                messageField.setText(messageField.getText()+":smert:");
-            }
-        });
+        js12.addActionListener(evt -> messageField.setText(messageField.getText()+":smert:"));
 
-        smilesPannel.setLayer(js1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        smilesPannel.setLayer(js2, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        smilesPannel.setLayer(js6, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        smilesPannel.setLayer(js5, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        smilesPannel.setLayer(js9, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        smilesPannel.setLayer(js10, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        smilesPannel.setLayer(js11, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        smilesPannel.setLayer(js12, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        smilesPannel.setLayer(js8, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        smilesPannel.setLayer(js4, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        smilesPannel.setLayer(js3, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        smilesPannel.setLayer(js7, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        smilesPanel.setLayer(js1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        smilesPanel.setLayer(js2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        smilesPanel.setLayer(js6, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        smilesPanel.setLayer(js5, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        smilesPanel.setLayer(js9, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        smilesPanel.setLayer(js10, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        smilesPanel.setLayer(js11, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        smilesPanel.setLayer(js12, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        smilesPanel.setLayer(js8, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        smilesPanel.setLayer(js4, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        smilesPanel.setLayer(js3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        smilesPanel.setLayer(js7, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        javax.swing.GroupLayout smilesPannelLayout = new javax.swing.GroupLayout(smilesPannel);
-        smilesPannel.setLayout(smilesPannelLayout);
+        javax.swing.GroupLayout smilesPannelLayout = new javax.swing.GroupLayout(smilesPanel);
+        smilesPanel.setLayout(smilesPannelLayout);
         smilesPannelLayout.setHorizontalGroup(
                 smilesPannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, smilesPannelLayout.createSequentialGroup()
@@ -417,19 +299,19 @@ public class ChatFrame extends bin.Abstractions.ChatFrame {
                 hzPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, hzPanelLayout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(smilesPannel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(smilesPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         hzPanelLayout.setVerticalGroup(
                 hzPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, hzPanelLayout.createSequentialGroup()
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(smilesPannel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(smilesPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap())
 
         );
     }
-    void initOnlinePanel(){
-        jScrollPane2 = new javax.swing.JScrollPane();
+    private void initOnlinePanel(){
+        JScrollPane jScrollPane2 = new JScrollPane();
         onlinePanel = new javax.swing.JEditorPane();
         onlinePanel.setEditable(false);
         onlinePanel.setBackground(new java.awt.Color(204, 204, 204));
@@ -444,6 +326,6 @@ public class ChatFrame extends bin.Abstractions.ChatFrame {
                 hzPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
         );
-        onlinePanel.setFont(new java.awt.Font("Arial", 1, 16));
+        onlinePanel.setFont(new java.awt.Font("Arial", Font.BOLD, 16));
     }
 }

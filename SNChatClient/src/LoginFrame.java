@@ -8,8 +8,6 @@ import bin.Abstractions.NewJFrame;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.io.IOException;
@@ -20,26 +18,8 @@ import java.util.ArrayList;
  * @author drelagreen
  */
 public class LoginFrame extends NewJFrame {
-    TrayIcon trayIcon;SystemTray tray;
-
-    KeyListener kl = new KeyListener() {
-        @Override
-        public void keyTyped(KeyEvent e) {
-
-        }
-
-        @Override
-        public void keyPressed(KeyEvent e) {
-
-            if (e.getKeyCode() == KeyEvent.VK_ENTER) {
-                logButton.doClick();
-            }
-        }
-
-        @Override
-        public void keyReleased(KeyEvent e) {
-        }
-    };
+    private TrayIcon trayIcon;
+    private SystemTray tray;
 
 
     LoginFrame() {
@@ -51,12 +31,7 @@ public class LoginFrame extends NewJFrame {
         } catch (AWTException e) {
             System.err.println("TrayIcon could not be added.");
         }
-        trayIcon.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.exit(0);
-            }
-        });
+        trayIcon.addActionListener(e -> System.exit(0));
 
 
         this.setLocationRelativeTo(null);
@@ -91,33 +66,48 @@ public class LoginFrame extends NewJFrame {
         }
 
 
-        ArrayList<Image> iCont = new ArrayList<Image>();
+        ArrayList<Image> iCont = new ArrayList<>();
         iCont.add(new ImageIcon("images/favicon.ico").getImage());
         setIconImages(iCont);
 
 
+        KeyListener kl = new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+
+                if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+                    logButton.doClick();
+                }
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+            }
+        };
         logField.addKeyListener(kl);
         passField.addKeyListener(kl);
         ipField.addKeyListener(kl);
 
-        logButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String login = logField.getText();
-                String ip = ipField.getText();
-                char[] pass = passField.getPassword();
+        logButton.addActionListener(e -> {
+            String login = logField.getText();
+            String ip = ipField.getText();
+            char[] pass = passField.getPassword();
 
-                if (!login.equals("") && !ip.equals(""))
-                    Kek.login(login, pass, ip);
+            if (!login.equals("") && !ip.equals(""))
+                Kek.login(login, pass, ip);
 
-                if (Kek.isConnected) {
-                    connectionLabel.setText(" Входим...");
-                    tray.remove(trayIcon);
-                    Kek.turn2();
-                } else {
+            if (Kek.isConnected) {
+                connectionLabel.setText(" Входим...");
+                tray.remove(trayIcon);
+                Kek.turn2();
+            } else {
 
-                    connectionLabel.setText(" Ошибка подключения! ");
-                }
+                connectionLabel.setText(" Ошибка подключения! ");
             }
         });
 

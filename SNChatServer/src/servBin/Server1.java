@@ -37,18 +37,18 @@ public class Server1 {
         }
     }
 
-    static void sendMessageFromConsole(String m) {
+    private static void sendMessageFromConsole(String m) {
         String[] temp = m.split(" ");
         switch (temp[0]){
             case ("!theOnline"):
-                String x = "sm ONLINE:\n";
+                StringBuilder x = new StringBuilder("sm ONLINE:\n");
                 for (T t : online) {
-                    x+=t.nick+"'\n";
+                    x.append(t.nick).append("'\n");
                 }
                 if (online.size() != 0)
-                    for (int i = 0; i < online.size(); i++) {
-                        if (!online.get(i).isInterrupted()) {
-                            online.get(i).sMessage(x);
+                    for (T anOnline : online) {
+                        if (!anOnline.isInterrupted()) {
+                            anOnline.sMessage(x.toString());
                         }
                     }
                 break;
@@ -67,31 +67,29 @@ public class Server1 {
                         "</div><div></div>\n" +
                         "\n";
                 if (online.size() != 0)
-                    for (int i = 0; i < online.size(); i++) {
-                        if (!online.get(i).isInterrupted()) {
-                            online.get(i).sMessage(msg);
+                    for (T anOnline : online) {
+                        if (!anOnline.isInterrupted()) {
+                            anOnline.sMessage(msg);
                         }
-                        }
+                    }
                 break;
             case ("!disconnect"):
                 if (online.size() != 0)
-                    for (int i = 0; i < online.size(); i++) {
-                        if (!online.get(i).isInterrupted()) {
-                            online.get(i).sMessage("dis <div style=\"background-color: rgb(153, 153, 153);\"><span\n" +
+                    for (T anOnline : online) {
+                        if (!anOnline.isInterrupted()) {
+                            anOnline.sMessage("dis <div style=\"background-color: rgb(153, 153, 153);\"><span\n" +
                                     "style=\"font-weight: bold; color: black;\"> <img\n" +
                                     "style=\"border: 2px solid ; width: 50px; height: 50px;\"\n" +
                                     "src=\"https://vk.com/images/emoji/D83DDC94_2x.png\"\n" +
                                     "alt=\"da\" align=\"middle\" hspace=\"3\" vspace=\"3\"><span\n" +
                                     "style=\"font-family: Arial; font-style: italic;\">&nbsp;<span\n" +
                                     "style=\"text-decoration: underline;\">*</span></span></span><small\n" +
-                                    "style=\"font-family: Arial;\"><span style=\"font-style: italic;\">["+new Date().getHours()+":"+new Date().getMinutes()+":"+new Date().getSeconds()+"]</span></small><span\n" +
+                                    "style=\"font-family: Arial;\"><span style=\"font-style: italic;\">[" + new Date().getHours() + ":" + new Date().getMinutes() + ":" + new Date().getSeconds() + "]</span></small><span\n" +
                                     "style=\"font-family: Arial;\"><span style=\"font-weight: bold;\"> --&gt;</span>\n" +
-                                    "</span><span style=\"font-weight: bold; font-family: Arial;\">"+temp[1]+" Отключился!"+"</span>\n" +
+                                    "</span><span style=\"font-weight: bold; font-family: Arial;\">" + temp[1] + " Отключился!" + "</span>\n" +
                                     "</div><div></div>\n");
                         }
                     }
-                break;
-            case ("!allert"):
                 break;
         }
     }
@@ -106,7 +104,7 @@ public class Server1 {
             }
     }
 
-    static void kek() throws IOException {
+    private static void kek() throws IOException {
         ServerSocket serverSocket = new ServerSocket(7788);
         while (true) {
             try {
@@ -123,7 +121,7 @@ public class Server1 {
         }
     }
 
-    static void dataBaseConnect() {
+    private static void dataBaseConnect() {
         System.out.println("Идет анализ базы данных...");
         String query = "select nickname,password,avatar from users;";
         String url = "jdbc:mysql://den1.mysql6.gear.host:3306/mydb241";
@@ -159,13 +157,13 @@ public class Server1 {
         text = replacer(text);
         String[] kek= text.split("");
         if (kek.length>50){
-            String temp="<p style=\"font-weight: bold; font-family: Arial;\">";
+            StringBuilder temp= new StringBuilder("<p style=\"font-weight: bold; font-family: Arial;\">");
             for (int i = 0; i < kek.length; i+=1) {
-                temp+=kek[i];
-                if (i%50==0&&i!=0){ temp+="</p><p style=\"font-weight: bold; font-family: Arial;\">";}
+                temp.append(kek[i]);
+                if (i%50==0&&i!=0){ temp.append("</p><p style=\"font-weight: bold; font-family: Arial;\">");}
             }
-            temp+="</p><p></p>";
-            text = temp;
+            temp.append("</p><p></p>");
+            text = temp.toString();
         }
         String url = avatar.get(nick);
         text = text.replace("#!","<span\n" +
@@ -201,7 +199,7 @@ public class Server1 {
         System.out.println(xx);
         return xx;
     }
-    static String replacer(String text) {
+    private static String replacer(String text) {
 
         Map<String,String> kek = new HashMap<>();
         kek.put("<","&lt;");
@@ -243,15 +241,16 @@ public class Server1 {
                 x2[i]=x1[i];
             }
         }
-        text="";
+        StringBuilder textBuilder = new StringBuilder();
         for (String s : x2) {
-            text+=s+" ";
+            textBuilder.append(s).append(" ");
         }
+        text = textBuilder.toString();
 
         return text;
     }
 
-    static String flower() {
+    private static String flower() {
         Random r = new Random();
         ArrayList<String> list = new ArrayList<>();
         list.add("Ромашка");
